@@ -37,7 +37,7 @@ declare module '@mui/material/Typography' {
   }
 }
 
-export const easyEatTheme = createTheme({
+export const easyCookTheme = createTheme({
   palette: {
     primaryBlackish: '#202327',
     primaryBackground: '#E7E9F7',
