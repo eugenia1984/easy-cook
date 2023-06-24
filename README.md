@@ -4,47 +4,51 @@
 
 ## <img width="30" height="30" src="https://img.icons8.com/dotty/30/name-tag-woman-horizontal.png" alt="name-tag-woman-horizontal"/> INTEGRANTES
 
-- [María Eugenia Costa](https://github.com/eugenia1984)
+- [<img width="24" height="24" src="https://img.icons8.com/material-sharp/24/github.png" alt="github icon"/> María Eugenia Costa - eugenia1984](https://github.com/eugenia1984) y [<img width="24" height="24" src="https://img.icons8.com/color/24/linkedin.png" alt="linkedin icon"/> maríaeugeniacosta](https://www.linkedin.com/in/mar%C3%ADaeugeniacosta/)
 
-- Florencia Velazquez
+- [<img width="24" height="24" src="https://img.icons8.com/material-sharp/24/github.png" alt="github icon"/> Florencia Velazquez - flopixx](https://github.com/flopixx)
 
 
 ---
 
-## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> TECNOLOGÍAS UTILIZADAS
+## <img width="40" height="40" src="https://img.icons8.com/plasticine/40/monitor.png" alt="monitor"/>    TECNOLOGÍAS UTILIZADAS
 
 
-- HTML5
+- <img width="30" height="30" src="https://img.icons8.com/color/30/html-5--v1.png" alt="html5 icon"/> HTML5
 
-- CSS3
+-  <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3 icon"/> CSS3
 
-- React: react-router-dom
+- <img width="30" height="30" src="https://img.icons8.com/officel/30/react.png" alt="react icon"/> React: react-router-dom
 
-- TypeScript
+- <img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript icon"/> TypeScript
 
-- Material UI
+- <img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui icon"/> Material UI
+
+- toastify, como notificaciones
+
+- sweetalert2, para los carteles de alerta, información o reconfirmación del usuario
 
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/>  LINKS
 
-💻 -> [Link al Canva con el maquetado del prototipo](https://www.canva.com/design/DAFiuea8ges/_sspazzLlNLHfqRZ10OZDQ/edit)
+💻 -> [Canva con el maquetado del prototipo](https://www.canva.com/design/DAFiuea8ges/_sspazzLlNLHfqRZ10OZDQ/edit)
 
-:computer: -> Trello
+:computer: -> [Trello con el tablero de trabajo](https://trello.com/b/edIbjVfI/easy-cook), aplicamos metodología Scrum y Ágile.
 
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/>  DESARROLLO
 
-- Crear el FrontEnd para un sitio que consuma una API pública, utilizando:
+- Crear el **FrontEnd** para un **sitio** que consuma una **API pública**, utilizando:
 
--> Un **framework** de FrontEnd. Se propone Angular pero se admitirán otros. Quienes quieran utilizar otro deberán consultar con los profesores antes de hacerlo.
+-> Un **framework** de FrontEnd. Se propone [<img width="30" height="30" src="https://img.icons8.com/color/30/angularjs.png" alt="angularjs icon"/> Angular](https://angular.io/) pero se admitirán otros, como [<img width="30" height="30" src="https://img.icons8.com/officel/30/react.png" alt="react icon"/> React](https://react.dev/). Quienes quieran utilizar otro deberán consultar con los profesores antes de hacerlo.
 
--> Utilizar **HTML5**.
+-> Utilizar: <img width="30" height="30" src="https://img.icons8.com/color/30/html-5--v1.png" alt="html5 icon"/> **HTML5**.
 
--> Maquetar los estilos usando de ser posible un **Framework** (bootstrap, foundation, etc) o un **preprocesador** (less, sass, stylus).
+-> Maquetar los estilos usando de ser posible un **Framework** ( [<img width="30" height="30" src="https://img.icons8.com/color/30/bootstrap.png" alt="bootstrap icon"/> Bootstrap](https://getbootstrap.com/), [Foundation](https://get.foundation/), etc) o un **preprocesador** ([less](https://lesscss.org/), [sass](https://sass-lang.com/), [stylus](https://stylus-lang.com/) ).
 
--> Consumir información de 1 o más APIs públicas y que esta se vean reflejada como datos en el sitio/app
+-> Consumir información de 1 o más **APIs públicas** y que esta se vean reflejada como datos en el sitio/app.
 
 ---
 
@@ -52,43 +56,43 @@
 
 #### Sitio/Aplicación Web:
 
-- Que se pueda navegar desde una PC o celular sin perder información.
+- Que se pueda **navegar desde una PC o celular sin perder información**.
 
-- 2 secciones de contenido estático.
+- **2 secciones** de **contenido estático**.
 
-- 1 sección de contenido dinámico consumiendo API pública a elección.
+- **1 sección** de **contenido dinámico** consumiendo **API pública** a elección.
 
-- 1 sección con un formulario de contacto (implementación solo desde el front).
+- **1 sección** con un **formulario de contacto** (implementación solo desde el front).
 
-- Sección protegida por usuario/clave que permita tener un área privada.
+- *1 Sección protegida por usuario/clave** que permita tener un área privada.
 
-- 1 Listado ordenado por algún criterio.
+- **1 Listado ordenado** por algún criterio.
 
-- 1 Listado con buscador por algún criterio (puede ser el mismo que el del ítem anterior).
+- **1 Listado con buscador** por algún criterio (puede ser el mismo que el del ítem anterior).
 
 *El código debe estar publicado en un repositorio GIT abierto*.
 
 - Buenas prácticas aplicadas para el front-end en general (html, css, js + angular ).
 
-- Datos de diferentes endpoint relacionados entre sí, por ejemplo películas asociadas a directores, o actores.
+- **Datos de diferentes endpoint relacionados entre sí**, por ejemplo películas asociadas a directores, o actores.
 
 ---
 
 ### <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> REQUISITOS OPCIONALES
 
-- Roles o permisos de usuario según rol.
+- **Roles** o **permisos de usuario** según rol.
 
-- Publicar la web en un hosting online.
+- **Publicar** la web en un hosting online.
 
-- Sumar buenas prácticas de SEO. Explicar cinco (5) cambios o mejoras realizadas y cómo impactarían en el SEO del proyecto
+- Sumar **buenas prácticas de SEO**. Explicar cinco (5) cambios o mejoras realizadas y cómo impactarían en el SEO del proyecto
 
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/bubbles/30/github.png" alt="github"/> REPOSITORIO
 
-El desarrollo deberá realizarse en una plataforma de git gratuita. Se recomienda GitLab o GitHub.
+El desarrollo deberá realizarse en una plataforma de git gratuita. Se recomienda <img width="30" height="30" src="https://img.icons8.com/color/30/gitlab.png" alt="gitlab icon"/> **GitLab** o <img width="30" height="30" src="https://img.icons8.com/ios-filled/30/github.png" alt="github icon"/> **GitHub**.
 
-Se evaluará el uso de git: Frecuencia y responsables de los commits, uso de branches y merge.
+Se evaluará el uso de git: frecuencia y responsables de los commits, uso de branches y merge.
 
 La creación del repositorio debe hacerse mediante un fork del repositorio del trabajo práctico (https://github.com/iamgld/angular-template-curso-2023).
 
@@ -96,7 +100,7 @@ La creación del repositorio debe hacerse mediante un fork del repositorio del t
 
 ## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> MODALIDAD DE ENTREGA Y DEFENSA DEL TRABAJO PRACTICO
 
-- La entrega final deberá hacerse enviando por email a los profesores la URL del repositorio de git, corroborando previamente que se pueda acceder públicamente a ese repositorio.
+- La entrega final deberá hacerse enviando por **email** a los profesores la **URL del repositorio de git**, corroborando previamente que se pueda acceder públicamente a ese repositorio.
 
 - En el archivo readme.md deberá indicarse, el trabajo, año de cursado e integrantes (legajo, nombre y apellido)
 
