@@ -22,11 +22,13 @@
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript icon"/> TypeScript
 
-- <img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui icon"/> Material UI
+- <img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui icon"/> Material UI, material-icons
 
-- toastify, como notificaciones
+- [toastify](https://fkhadra.github.io/react-toastify/introduction), como notificaciones
 
-- sweetalert2, para los carteles de alerta, información o reconfirmación del usuario
+- [sweetalert2](https://sweetalert2.github.io/), para los carteles de alerta, información o reconfirmación del usuario
+
+- [axios](https://axios-http.com/docs/intro)
 
 ---
 
