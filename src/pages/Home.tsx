@@ -1,11 +1,13 @@
-interface Props {
+import { Headline } from "../components/atom/Headline"
+
+interface HomeProps {
   title: string
 }
 
-export const Home: React.FC<Props> = ({ title }) => {
+export const Home: React.FC<HomeProps> = ({ title }) => {
   return (
     <main>
-      <h1>{ title }</h1>
+      <Headline title={title}/>
     </main>
   )
 }
