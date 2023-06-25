@@ -1,4 +1,5 @@
-import { Headline } from "../components/atom/Headline"
+import { Headline } from '../components/atom/Headline'
+import { Loader } from '../components/atom/Loader'
 
 interface HomeProps {
   title: string
@@ -7,7 +8,8 @@ interface HomeProps {
 export const Home: React.FC<HomeProps> = ({ title }) => {
   return (
     <main>
-      <Headline title={title}/>
+      <Headline title={ title } />
+      <Loader title="Loading..."/>
     </main>
   )
 }
