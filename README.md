@@ -4,7 +4,7 @@
 
 ## <img width="30" height="30" src="https://img.icons8.com/dotty/30/name-tag-woman-horizontal.png" alt="name-tag-woman-horizontal"/> INTEGRANTES
 
-- [<img width="24" height="24" src="https://img.icons8.com/material-sharp/24/github.png" alt="github icon"/> María Eugenia Costa - eugenia1984](https://github.com/eugenia1984) y [<img width="24" height="24" src="https://img.icons8.com/color/24/linkedin.png" alt="linkedin icon"/> maríaeugeniacosta](https://www.linkedin.com/in/mar%C3%ADaeugeniacosta/)
+- [<img width="24" height="24" src="https://img.icons8.com/material-sharp/24/github.png" alt="github icon"/> María Eugenia Costa - eugenia1984](https://github.com/eugenia1984) y [<img width="24" height="24" src="https://img.icons8.com/color/24/linkedin.png" alt="linkedin icon"/> maríaeugeniacosta](https://www.linkedin.com/in/maíaeugeniacosta/)
 
 - [<img width="24" height="24" src="https://img.icons8.com/material-sharp/24/github.png" alt="github icon"/> Florencia Velazquez - flopixx](https://github.com/flopixx)
 

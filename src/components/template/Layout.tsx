@@ -11,7 +11,7 @@ export const Layout: React.FC<Props> = () => {
     <>
       <Header title="Header" />
       <Outlet />
-      <Footer title="Footer" />
+      <Footer text="All rights reserved" />
     </>
   )
 }

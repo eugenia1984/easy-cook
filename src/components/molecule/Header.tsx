@@ -4,8 +4,8 @@ interface Props {
 
 export const Header: React.FC<Props> = ({ title }) => {
   return (
-    <main>
+    <header>
       <h1>{ title }</h1>
-    </main>
+    </header>
   )
 }
