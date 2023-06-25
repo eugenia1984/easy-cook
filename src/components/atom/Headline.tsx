@@ -21,7 +21,7 @@ export const Headline: React.FC<HeadlineProps> = ({ variant, title, align, color
       <Typography
         variant={ variant ? variant : 'h1' }
         align={ align ? align : 'center' }
-        color={ color ? color : 'secondary' }
+        color={ color ? color : 'primary' }
         padding={padding? padding : '1rem 0.50rem'}
       >
         { title ? title : 'Title not found' }

@@ -1,11 +1,13 @@
-interface Props {
+import { Headline } from "../components/atom/Headline"
+
+interface RecipeProps {
   title: string
 }
 
-export const Recipe: React.FC<Props> = ({ title }) => {
+export const Recipe: React.FC<RecipeProps> = ({ title }) => {
   return (
     <main>
-      <h1>{ title }</h1>
+      <Headline title={title}/>
     </main>
   )
 }

@@ -1,11 +1,13 @@
-interface Props {
+import { Headline } from "../components/atom/Headline"
+
+interface FavoritesProps {
   title: string
 }
 
-export const Favorites: React.FC<Props> = ({ title }) => {
+export const Favorites: React.FC<FavoritesProps> = ({ title }) => {
   return (
     <main>
-      <h1>{ title }</h1>
+      <Headline title={title}/>
     </main>
   )
 }
