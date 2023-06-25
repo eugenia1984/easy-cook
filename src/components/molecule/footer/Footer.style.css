@@ -1,6 +1,7 @@
 footer {
   border-top: 1px solid black;
   padding: 1rem 0.75rem;
+  background-color: rgb(236, 239, 241);
 }
 
 footer a {

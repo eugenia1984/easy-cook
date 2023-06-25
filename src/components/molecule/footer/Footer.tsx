@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Typography } from '@mui/material'
-import { YEAR } from '../../utils/constants'
+import { YEAR } from '../../../utils/constants'
 import './Footer.style.css'
 
 interface FooterProps {
