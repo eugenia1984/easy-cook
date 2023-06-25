@@ -9,7 +9,6 @@ export const Home: React.FC<HomeProps> = ({ title }) => {
   return (
     <main>
       <Headline title={ title } />
-      <Loader title="Loading..."/>
     </main>
   )
 }
