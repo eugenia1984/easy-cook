@@ -16,7 +16,7 @@ declare module "@mui/material/styles" {
 export interface CustomStyleProps {
   primaryBackground?: string,
   primaryBackground2?: string,
-  primaryBlackish?: string
+  primaryBlackish?: string,
 }
 
 declare module '@mui/material/styles' {
@@ -396,6 +396,24 @@ export const easyCookTheme = createTheme({
           borderColor: theme.palette.primaryBackground,
           borderWidth: '1px'
         })
+      }
+    },
+    MuiAlert: {
+      defaultProps: {
+        style: {
+          borderRadius: '0.8rem',
+          fontSize: '1rem'
+        },
+      },
+      styleOverrides: {
+        standardError: {
+          border: '1px solid #CD1812',
+          background: 'rgba(244,67,54,0.1)'
+        },
+        standardSuccess: {
+          border: '1px solid #66BB6A',
+          background: 'rgba(102, 187, 106, 0.1)'
+        }
       }
     }
   }

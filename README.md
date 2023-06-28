@@ -8,15 +8,13 @@
 
 - [<img width="24" height="24" src="https://img.icons8.com/material-sharp/24/github.png" alt="github icon"/> Florencia Velazquez - flopixx](https://github.com/flopixx)
 
-
 ---
 
-## <img width="40" height="40" src="https://img.icons8.com/plasticine/40/monitor.png" alt="monitor"/>    TECNOLOGÍAS UTILIZADAS
-
+## <img width="40" height="40" src="https://img.icons8.com/plasticine/40/monitor.png" alt="monitor"/> TECNOLOGÍAS UTILIZADAS
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/html-5--v1.png" alt="html5 icon"/> HTML5
 
--  <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3 icon"/> CSS3
+- <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3 icon"/> CSS3
 
 - <img width="30" height="30" src="https://img.icons8.com/officel/30/react.png" alt="react icon"/> React: react-router-dom
 
@@ -30,9 +28,11 @@
 
 - [axios](https://axios-http.com/docs/intro)
 
+- [formik](https://formik.org/) y Yup, para validar formularios
+
 ---
 
-## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/>  LINKS
+## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> LINKS
 
 💻 -> [Canva con el maquetado del prototipo](https://www.canva.com/design/DAFiuea8ges/_sspazzLlNLHfqRZ10OZDQ/edit)
 
@@ -40,7 +40,7 @@
 
 ---
 
-## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/>  DESARROLLO
+## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> DESARROLLO
 
 - Crear el **FrontEnd** para un **sitio** que consuma una **API pública**, utilizando:
 
@@ -66,13 +66,13 @@
 
 - **1 sección** con un **formulario de contacto** (implementación solo desde el front).
 
-- *1 Sección protegida por usuario/clave** que permita tener un área privada.
+- \*1 Sección protegida por usuario/clave\*\* que permita tener un área privada.
 
 - **1 Listado ordenado** por algún criterio.
 
 - **1 Listado con buscador** por algún criterio (puede ser el mismo que el del ítem anterior).
 
-*El código debe estar publicado en un repositorio GIT abierto*.
+_El código debe estar publicado en un repositorio GIT abierto_.
 
 - Buenas prácticas aplicadas para el front-end en general (html, css, js + angular ).
 
@@ -98,7 +98,7 @@ Se evaluará el uso de git: frecuencia y responsables de los commits, uso de bra
 
 La creación del repositorio debe hacerse mediante un fork del repositorio del trabajo práctico (https://github.com/iamgld/angular-template-curso-2023).
 
-----
+---
 
 ## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> MODALIDAD DE ENTREGA Y DEFENSA DEL TRABAJO PRACTICO
 
@@ -107,8 +107,6 @@ La creación del repositorio debe hacerse mediante un fork del repositorio del t
 - En el archivo readme.md deberá indicarse, el trabajo, año de cursado e integrantes (legajo, nombre y apellido)
 
 Se realizará en fecha a confirmar una defensa oral y virtual del TP, que no debe exceder los 20 minutos y en donde los alumnos mostrarán el trabajo realizado, narrando si tuvieron algún problema y como fue resuelto, pudiendo tener que responder preguntas de los docentes, si surgieran.
-
-
 
 ---
 
