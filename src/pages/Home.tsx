@@ -1,6 +1,4 @@
 import { Headline } from '../components/atom/Headline'
-import { Loader } from '../components/atom/Loader'
-
 interface HomeProps {
   title: string
 }

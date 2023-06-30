@@ -1,4 +1,7 @@
-import { Headline } from "../components/atom/Headline"
+import React from 'react'
+import { BackgroundSection } from '../components/atom/BackgroundSection'
+import { LoginForm } from '../components/molecule/login/LoginForm'
+import backgroundImage from '../assets/bg.jpg'
 
 interface LoginProps {
   title: string
@@ -7,7 +10,9 @@ interface LoginProps {
 export const Login: React.FC<LoginProps> = ({ title }) => {
   return (
     <main>
-      <Headline title={title}/>
+      <BackgroundSection srcImg={ backgroundImage }>
+        <LoginForm title={ title } />
+      </BackgroundSection>
     </main>
   )
 }
