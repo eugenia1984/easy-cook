@@ -13,7 +13,7 @@ import { Headline } from '../../atom/Headline'
 import { ContactFormType } from './ContactForm.d'
 import { FormValidate } from '../../../utils/validateForm'
 import { useNotification } from '../../../context/notification.context'
-
+import './ContactForm.css'
 interface ContactFormProps {
   title: string
 }
@@ -35,7 +35,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ title }) => {
   })
 
   return (
-    <>
+    <section className="contact-form">
       <Headline title={ title } />
       <Container maxWidth="sm">
         <Grid container>
@@ -117,6 +117,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({ title }) => {
           </Grid>
         </Grid>
       </Container>
-    </>
+    </section>
   )
 }

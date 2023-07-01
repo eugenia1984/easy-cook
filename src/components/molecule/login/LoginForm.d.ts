@@ -34,7 +34,7 @@ type InitialValues = {
   confirmPassword: string,
 }
 
-export const initialValues:InitialValues = {
+export const initialValues: InitialValues = {
   fullName: '',
   password: '',
   confirmPassword: '',

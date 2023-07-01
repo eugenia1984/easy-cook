@@ -12,23 +12,23 @@
 
 ## <img width="40" height="40" src="https://img.icons8.com/plasticine/40/monitor.png" alt="monitor"/> TECNOLOGÍAS UTILIZADAS
 
-- <img width="30" height="30" src="https://img.icons8.com/color/30/html-5--v1.png" alt="html5 icon"/> HTML5
+- <img width="30" height="30" src="https://img.icons8.com/color/30/html-5--v1.png" alt="html5 icon"/> **HTML5**
 
-- <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3 icon"/> CSS3
+- <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3 icon"/> **CSS3**
 
-- <img width="30" height="30" src="https://img.icons8.com/officel/30/react.png" alt="react icon"/> React: react-router-dom
+- <img width="30" height="30" src="https://img.icons8.com/officel/30/react.png" alt="react icon"/> **React**: react-router-dom, useState, useEffect
 
-- <img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript icon"/> TypeScript
+- <img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript icon"/> **TypeScript**
 
-- <img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui icon"/> Material UI, material-icons
+- <img width="30" height="30" src="https://img.icons8.com/color/30/material-ui.png" alt="material-ui icon"/> **Material UI**, material-icons
 
-- [toastify](https://fkhadra.github.io/react-toastify/introduction), como notificaciones
+- [**Toastify**](https://fkhadra.github.io/react-toastify/introduction), como notificaciones
 
-- [sweetalert2](https://sweetalert2.github.io/), para los carteles de alerta, información o reconfirmación del usuario
+- [**SweetAlert2**](https://sweetalert2.github.io/), para los carteles de alerta, información o reconfirmación del usuario
 
-- [axios](https://axios-http.com/docs/intro)
+- [**Axios**](https://axios-http.com/docs/intro)
 
-- [formik](https://formik.org/) y Yup, para validar formularios
+- [**Formik**](https://formik.org/)(FormikProps:  values, touched, errors, handleBlur, handleChange, isSubmitting) y **Yup**(initialValues, onSubmit, validationSchema), para validar formularios
 
 ---
 

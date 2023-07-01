@@ -6,6 +6,7 @@
 
 .container-content {
   padding-top: 5rem;
+  min-height: 90vh;
 }
 
 .submitButton {

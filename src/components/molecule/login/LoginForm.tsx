@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Box, Button, Grid, TextField } from '@mui/material'
 import { Formik, Form, FormikProps } from 'formik'
-import * as Yup from 'yup'
 import { Headline } from '../../atom/Headline'
-import './LoginForm.styles.css'
 import { IFormStatus, ISignUpForm, formStatusProps, initialValues } from './LoginForm.d'
+import { VALID, validateData } from './utils'
+import './LoginForm.styles.css'
 
 interface LoginFormProps {
   title: string
@@ -21,6 +21,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
     try {
       if (data) {
         setFormStatus(formStatusProps.success)
+        alert(`Welcome ${data.fullName} to EasyCook!`)
         resetForm({})
         // TODO: hay que pasar de User LogOut a User LogIn
       }
@@ -50,25 +51,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
               actions.setSubmitting(false)
             }, 500)
           } }
-          validationSchema={ Yup.object().shape({
-            fullName: Yup.string().required('Please enter full name'),
-            password: Yup.string()
-              .matches(
-                /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()]).{8,20}\S$/
-              )
-              .required(
-                'Please valid password. One uppercase, one lowercase, one special character and no spaces'
-              ),
-            confirmPassword: Yup.string()
-              .required('Required')
-              .test(
-                'password-match',
-                'Password musth match',
-                function (value) {
-                  return this.parent.password === value
-                }
-              ),
-          }) }
+          validationSchema={ validateData }
         >
           { (props: FormikProps<ISignUpForm>) => {
             const {
@@ -104,15 +87,11 @@ export const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
                         label="Full Name"
                         value={ values.fullName }
                         type="text"
-                        helperText={
-                          errors.fullName && touched.fullName
-                            ? errors.fullName
-                            : 'Enter your full name.'
+                        helperText={ errors.fullName && touched.fullName ?
+                          errors.fullName : 'Enter your full name.'
                         }
-                        error={
-                          errors.fullName && touched.fullName
-                            ? true
-                            : false
+                        error={ errors.fullName && touched.fullName ?
+                          true : false
                         }
                         onChange={ handleChange }
                         onBlur={ handleBlur }
@@ -129,15 +108,11 @@ export const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
                         label="Password"
                         value={ values.password }
                         type="password"
-                        helperText={
-                          errors.password && touched.password
-                            ? 'Please valid password. One uppercase, one lowercase, one special character and no spaces'
-                            : 'One uppercase, one lowercase, one special character and no spaces'
+                        helperText={ errors.password && touched.password ?
+                          VALID.PASSWORD : VALID.PASSWORD
                         }
-                        error={
-                          errors.password && touched.password
-                            ? true
-                            : false
+                        error={ errors.password && touched.password ?
+                          true : false
                         }
                         onChange={ handleChange }
                         onBlur={ handleBlur }
@@ -154,17 +129,11 @@ export const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
                         label="Confirm password"
                         value={ values.confirmPassword }
                         type="password"
-                        helperText={
-                          errors.confirmPassword &&
-                            touched.confirmPassword
-                            ? errors.confirmPassword
-                            : 'Re-enter password to confirm'
+                        helperText={ errors.confirmPassword && touched.confirmPassword ?
+                          errors.confirmPassword : 'Re-enter password to confirm'
                         }
-                        error={
-                          errors.confirmPassword &&
-                            touched.confirmPassword
-                            ? true
-                            : false
+                        error={ errors.confirmPassword && touched.confirmPassword ?
+                          true : false
                         }
                         onChange={ handleChange }
                         onBlur={ handleBlur }
@@ -185,18 +154,14 @@ export const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
                       </Button>
                       { displayFormStatus && (
                         <div className="formStatus">
-                          { formStatus.type === 'error' ? (
-                            <p className="errorMessage"                     >
-                              { formStatus.message }
-                            </p>
-                          ) : formStatus.type ===
-                            'success' ? (
-                            <p
-                              className="successMessage"
-                            >
-                              { formStatus.message }
-                            </p>
-                          ) : null }
+                          {
+                            formStatus.type === 'error' ?
+                              (<p className="errorMessage">{ formStatus.message }</p>)
+                              : formStatus.type === 'success' ?
+                                (<p className="successMessage">{ formStatus.message }</p>)
+                                :
+                                null
+                          }
                         </div>
                       ) }
                     </Grid>
