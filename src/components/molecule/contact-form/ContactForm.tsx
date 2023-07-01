@@ -1,122 +1,174 @@
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import {
   Box,
   Button,
-  Container,
   Grid,
-  Paper,
   TextField,
-  Typography,
 } from '@mui/material'
-import { useFormik } from 'formik'
+import { Form, Formik, FormikProps } from 'formik'
 import { Headline } from '../../atom/Headline'
-import { ContactFormType } from './ContactForm.d'
-import { FormValidate } from '../../../utils/validateForm'
-import { useNotification } from '../../../context/notification.context'
+import { IContactFormStatus, IContactForm, contactFormStatusProps, initialValues } from './ContactForm.d'
 import './ContactForm.css'
+import { CONTACT_REQUIRED, validateData } from './utils'
 interface ContactFormProps {
   title: string
 }
 
 export const ContactForm: React.FC<ContactFormProps> = ({ title }) => {
   const navigate = useNavigate()
-  const { getSuccess } = useNotification()
-
-  const formik = useFormik<ContactFormType>({
-    initialValues: {
-      email: '',
-      reason: '',
-      message: ''
-    },
-    validationSchema: FormValidate,
-    onSubmit: (values: ContactFormType) => {
-      getSuccess(JSON.stringify(values));
-    },
+  const [displayFormStatus, setDisplayFormStatus] = useState(false)
+  const [formStatus, setFormStatus] = useState<IContactFormStatus>({
+    message: '',
+    type: '',
   })
+
+  const createNewMessage = async (data: IContactForm, resetForm: Function) => {
+    try {
+      if (data) {
+        setFormStatus(contactFormStatusProps.success)
+        alert(`Message send to EasyCook!`)
+        resetForm({})
+      }
+    } catch (error) {
+      console.warn(error)
+      setFormStatus(contactFormStatusProps.error)
+    } finally {
+      setDisplayFormStatus(true)
+    }
+  }
+
 
   return (
     <section className="contact-form">
-      <Headline title={ title } />
-      <Container maxWidth="sm">
-        <Grid container>
-          <Button
-            fullWidth
-            type="submit"
-            variant="contained"
-            sx={ { mt: 5, mb: 3 } }
-            onClick={ () => navigate(`/`) }
-          >
-            Back to Home
-          </Button>
-        </Grid>
-        <Grid
-          container
-          direction="column"
-          alignItems="center"
-          justifyContent="center"
-          sx={ { minHeight: '90vh' } }
+      <Formik
+          initialValues={ initialValues }
+          onSubmit={ (values: IContactForm, actions) => {
+            createNewMessage(values, actions.resetForm)
+            setTimeout(() => {
+              actions.setSubmitting(false)
+            }, 500)
+          } }
+          validationSchema={ validateData }
         >
-          <Grid item>
-            <Paper sx={ { padding: '1.2em', borderRadius: '0.5em' } }>
-              <Typography sx={ { mt: 1, mb: 1 } } variant="h4">
-                Login
-              </Typography>
-              <Box component="form" onSubmit={ formik.handleSubmit }>
-                <TextField
-                  name="email"
-                  margin="normal"
-                  type="text"
-                  fullWidth
-                  label="Email"
-                  sx={ { mt: 2, mb: 1.5 } }
-                  value={ formik.values.email }
-                  onChange={ formik.handleChange }
-                  error={
-                    formik.touched.email && Boolean(formik.errors.email)
-                  }
-                  helperText={ formik.touched.email && formik.errors.email }
-                />
-                <TextField
-                  name="reason"
-                  margin="normal"
-                  type="text"
-                  fullWidth
-                  label="Reason"
-                  sx={ { mt: 1.5, mb: 1.5 } }
-                  value={ formik.values.reason }
-                  onChange={ formik.handleChange }
-                  error={
-                    formik.touched.reason && Boolean(formik.errors.reason)
-                  }
-                  helperText={ formik.touched.reason && formik.errors.reason }
-                />
-                <TextField
-                  name="message"
-                  margin="normal"
-                  type="text"
-                  fullWidth
-                  label="message"
-                  sx={ { mt: 1.5, mb: 1.5 } }
-                  value={ formik.values.message }
-                  onChange={ formik.handleChange }
-                  error={
-                    formik.touched.message && Boolean(formik.errors.message)
-                  }
-                  helperText={ formik.touched.message && formik.errors.message }
-                />
-                <Button
-                  fullWidth
-                  type="submit"
-                  variant="contained"
-                  sx={ { mt: 1.5, mb: 3 } }
-                >
-                  Login
-                </Button>
+          { (props: FormikProps<IContactForm>) => {
+            const {
+              values,
+              touched,
+              errors,
+              handleBlur,
+              handleChange,
+              isSubmitting,
+            } = props
+            return (
+              <Box
+                sx={ {
+                  backgroundColor: 'white',
+                  padding: '1rem 0.75rem 2rem',
+                  borderRadius: '14px',
+                } }
+
+              >
+                <Form>
+                  <Headline title={ title } />
+                  <Grid
+                    container
+                    sx={ { justify: 'space-around', direction: 'row' } }
+                  >
+                    <Grid
+                      item
+                      sx={ { width: '90%', marginBottom: '0.75rem' } }
+                    >
+                      <TextField
+                        name="email"
+                        id="email"
+                        label="E-mail"
+                        value={ values.email }
+                        type="text"
+                        helperText={ errors.email && touched.email ?
+                          errors.email : 'Enter your email.'
+                        }
+                        error={ errors.email && touched.email ?
+                          true : false
+                        }
+                        onChange={ handleChange }
+                        onBlur={ handleBlur }
+                        sx={ { width: '100%', marginBottom: '0.75rem' } }
+                      />
+                    </Grid>
+                    <Grid
+                      item
+                      sx={ { width: '90%', marginBottom: '0.75rem' } }
+                    >
+                      <TextField
+                        name="reason"
+                        id="reason"
+                        label="reason"
+                        value={ values.reason }
+                        type="text"
+                        helperText={ errors.reason && touched.reason ?
+                          CONTACT_REQUIRED.REASON : CONTACT_REQUIRED.REASON
+                        }
+                        error={ errors.reason && touched.reason ?
+                          true : false
+                        }
+                        onChange={ handleChange }
+                        onBlur={ handleBlur }
+                        sx={ { width: '100%', marginBottom: '0.75rem' } }
+                      />
+                    </Grid>
+                    <Grid
+                      item
+                      sx={ { width: '90%', marginBottom: '0.75rem' } }
+                    >
+                      <TextField
+                        name="message"
+                        id="message"
+                        label="Message"
+                        value={ values.message }
+                        type="text"
+                        helperText={ errors.message && touched.message ?
+                          CONTACT_REQUIRED.MESSAGE  : CONTACT_REQUIRED.MESSAGE
+                        }
+                        error={ errors.message && touched.message ?
+                          true : false
+                        }
+                        onChange={ handleChange }
+                        onBlur={ handleBlur }
+                        sx={ { width: '100%', marginBottom: '0.75rem' } }
+                      />
+                    </Grid>
+                    <Grid
+                      item
+                      className="submitButton"
+                    >
+                      <Button
+                        type="submit"
+                        variant="contained"
+                        color="primary"
+                        disabled={ isSubmitting }
+                      >
+                        SEND
+                      </Button>
+                      { displayFormStatus && (
+                        <div className="formStatus">
+                          {
+                            formStatus.type === 'error' ?
+                              (<p className="errorMessage">{ formStatus.message }</p>)
+                              : formStatus.type === 'success' ?
+                                (<p className="successMessage">{ formStatus.message }</p>)
+                                :
+                                null
+                          }
+                        </div>
+                      ) }
+                    </Grid>
+                  </Grid>
+                </Form>
               </Box>
-            </Paper>
-          </Grid>
-        </Grid>
-      </Container>
+            )
+          } }
+        </Formik>
     </section>
   )
 }
