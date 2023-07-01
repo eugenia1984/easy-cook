@@ -17,11 +17,10 @@ import MenuItem from '@mui/material/MenuItem'
 
 import { Pages } from './Header.d'
 import './HeaderNavBar.styles.css'
+import { useUserContext } from '../../../context/UserContext'
 
 interface PropsHeaderNavBar {
   title: string
-  isLoged: boolean
-  setIsLoged: Dispatch<React.SetStateAction<boolean>>
 }
 
 const pages: Pages = [
@@ -35,7 +34,11 @@ const settings: Pages = [
   { text: 'Contact', url: publicRoutes.CONTACT }
 ]
 
-export const HeaderNavBar: React.FC<PropsHeaderNavBar> = ({ title, isLoged, setIsLoged }) => {
+export const HeaderNavBar: React.FC<PropsHeaderNavBar> = ({
+  title,
+}) => {
+  const { user, logout } = useUserContext()
+  console.log(user)
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -47,7 +50,7 @@ export const HeaderNavBar: React.FC<PropsHeaderNavBar> = ({ title, isLoged, setI
 
   const handleCloseUserMenu = () => setAnchorElUser(null)
 
-  const handleLogOut = () => { setIsLoged(false) }
+  const handleLogOut = () => logout()
 
   return (
     <AppBar position="static">
@@ -69,9 +72,10 @@ export const HeaderNavBar: React.FC<PropsHeaderNavBar> = ({ title, isLoged, setI
           >
             { title }
           </Typography>
-          { isLoged ?
+          { user ?
             (
               <Box sx={ { flexGrow: 0 } }>
+                <span>{ user.fullName }</span>
                 <Tooltip title="Open settings">
                   <IconButton onClick={ handleOpenUserMenu } sx={ { p: 0 } }>
                     <Avatar alt="Remy Sharp" src="https://img.icons8.com/ios-filled/50/user-female-circle.png" />

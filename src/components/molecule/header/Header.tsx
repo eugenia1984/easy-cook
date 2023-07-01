@@ -7,14 +7,11 @@ interface Props {
 }
 
 export const Header: React.FC<Props> = ({ title }) => {
-  const [isLoged, setIsLoged] = useState(true)
 
   return (
     <header>
       <HeaderNavBar
         title={ title }
-        isLoged={ isLoged }
-        setIsLoged={ setIsLoged }
       />
     </header>
   )

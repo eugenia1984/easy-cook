@@ -16,7 +16,7 @@
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3 icon"/> **CSS3**
 
-- <img width="30" height="30" src="https://img.icons8.com/officel/30/react.png" alt="react icon"/> **React**: react-router-dom, useState, useEffect
+- <img width="30" height="30" src="https://img.icons8.com/officel/30/react.png" alt="react icon"/> **React**: react-router-dom, useState, useEffect, createContext
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript icon"/> **TypeScript**
 

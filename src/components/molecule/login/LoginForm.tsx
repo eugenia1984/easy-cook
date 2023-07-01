@@ -1,16 +1,20 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Box, Button, Grid, TextField } from '@mui/material'
 import { Formik, Form, FormikProps } from 'formik'
 import { Headline } from '../../atom/Headline'
 import { IFormStatus, ISignUpForm, formStatusProps, initialValues } from './LoginForm.d'
 import { VALID, validateData } from './utils'
 import './LoginForm.styles.css'
+import { useUserContext } from '../../../context/UserContext'
 
 interface LoginFormProps {
   title: string
 }
 
 export const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
+  const navigate = useNavigate()
+  const { login } = useUserContext()
   const [displayFormStatus, setDisplayFormStatus] = useState(false)
   const [formStatus, setFormStatus] = useState<IFormStatus>({
     message: '',
@@ -21,9 +25,10 @@ export const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
     try {
       if (data) {
         setFormStatus(formStatusProps.success)
-        alert(`Welcome ${data.fullName} to EasyCook!`)
+        login(data.fullName, data.password)
+        alert(`Welcome ${ data.fullName } to EasyCook!`)
         resetForm({})
-        // TODO: hay que pasar de User LogOut a User LogIn
+        navigate('/')
       }
     } catch (error) {
       const response = error.response
