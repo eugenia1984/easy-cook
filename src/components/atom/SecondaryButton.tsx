@@ -2,15 +2,14 @@ import { Button, ButtonProps } from '@mui/material'
 import { colorBtn, sizeBtn } from '../../utils/types'
 
 /** 
- * Reusable component for a button:
- * @prop: textBtn, a string tha will be the text of the button
- * @prop: sizeBtn: that size of the button, posible values:
- * 'small' , 'medium' or 'large'. Optional prop, by default: 'medium'
- * @prop: colorBtn, that background color of the button. Optional prop,
- * bydefault: primary
- * It can receive more props, for axample some Event for the 
- * onCLick button.
- */
+* Reusable component for a button:
+* @prop: textBtn, a string tha will be the text of the button
+* @prop: sizeBtn: that size of the button, posible values:
+* 'small' , 'medium' or 'large'. Optional prop, by default: 'medium'
+* @prop: colorBtn, that background color of the button. Optional prop, bydefault: primary
+* It can receive more props, for axample some Event for the 
+* onCLick button.
+*/
 interface SecondaryButtonProps extends ButtonProps {
   text: string
   size?: sizeBtn
