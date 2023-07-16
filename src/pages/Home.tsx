@@ -1,13 +1,13 @@
-import { Headline } from '../components/atom/Headline'
+import { HeroSection } from '../components/molecule/hero-section/HeroSection'
 import { CTASection } from '../components/molecule/cta-section/CTASection'
+
 interface HomeProps {
-  title: string
 }
 
-export const Home: React.FC<HomeProps> = ({ title }) => {
+export const Home: React.FC<HomeProps> = () => {
   return (
     <main>
-      <Headline title={ title } />
+      <HeroSection />
       <CTASection />
     </main>
   )

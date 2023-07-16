@@ -1,17 +1,17 @@
 import { Box } from '@mui/material'
 import { BackgroundSection } from '../../atom/BackgroundSection'
-import ctaImage from '../../../assets/recipes_pattern.jpg'
+import heroImage from '../../../assets/hero-pic.jpg'
 import { Headline } from '../../atom/Headline'
 import PrimaryButton from '../../atom/PrimaryButton'
 
-interface CTASectionProps {
+interface HeroSectionProps {
 
 }
 
-export const CTASection: React.FC<CTASectionProps> = () => {
+export const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
     <section>
-      <BackgroundSection srcImg={ ctaImage } srcHeight='520px'>
+      <BackgroundSection srcImg={ heroImage } srcHeight='520px'>
         <Box sx={ {
           background: 'linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.5))',
           height: '100%',
@@ -30,17 +30,17 @@ export const CTASection: React.FC<CTASectionProps> = () => {
           gap: '1rem'
         } }>
           <Headline
-            title='Explore all our recipes'
+            title='Join EasyCook'
+            colorHeadline='#fff'
+            variantHeadline='h1'
+          />
+          <Headline
+            title='Thousands of Recipes. Endless Inspiration..'
             colorHeadline='#fff'
             variantHeadline='h2'
           />
-          <Headline
-            title='Discover all EasyCook® has to offer, with over 70,000 triple-tested recipes all with innovative Guided Cooking functionality.'
-            colorHeadline='#fff'
-            variantHeadline='h3'
-          />
           <PrimaryButton
-            textBtn='DISCOVER'
+            textBtn='TRY IT FOR FREE'
           />
         </Box>
       </BackgroundSection>
