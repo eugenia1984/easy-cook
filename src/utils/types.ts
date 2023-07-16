@@ -5,3 +5,20 @@ export type colorBtn = 'inherit' | 'primary' | 'secondary' | 'success' | 'error'
 // Type for the title
 export type variantHeadline = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2'
 export type alignHeadline = 'right' | 'left' | 'center' | 'justify'
+
+// Home sliders Latest Recipes section
+export type HomeSlides = {
+  sliders: Slide[]
+}
+
+export type Slide = {
+  id: number
+  title: string
+  image: string
+  imageType: ImageType
+}
+
+export enum ImageType {
+  Jpg = "jpg",
+  Png = "png"
+}
