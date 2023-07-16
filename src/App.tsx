@@ -11,18 +11,17 @@ import { NotFound } from './pages/NotFound'
 import './App.css'
 
 function App() {
-
   return (
     <HashRouter>
       <Routes>
         <Route element={ <Layout /> }>
-          <Route path={ publicRoutes.HOME } element={ <Home title="Home" /> } />
-          <Route path={ publicRoutes.LOGIN} element={ <Login title="Login" /> } />
+          <Route path={ publicRoutes.HOME } element={ <Home /> } />
+          <Route path={ publicRoutes.LOGIN } element={ <Login title="Login" /> } />
           <Route path={ publicRoutes.CONTACT } element={ <Contact title="Contact" /> } />
           <Route path={ privateRoutes.SEARCH } element={ <Search title="Search" /> } />
           <Route path={ privateRoutes.RECIPE_BY_ID } element={ <Recipe title="Recipe" /> } />
           <Route path={ privateRoutes.FAVORITES } element={ <Favorites title="Favorites" /> } />
-          <Route path={ publicRoutes.NOT_FOUND} element={ <NotFound title="Not Found" /> } />
+          <Route path={ publicRoutes.NOT_FOUND } element={ <NotFound /> } />
         </Route>
       </Routes>
     </HashRouter>
