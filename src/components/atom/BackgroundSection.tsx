@@ -16,11 +16,11 @@ export const BackgroundSection: React.FC<BackgroundSectionProps> = ({
 }) => {
   return (
     <Box sx={ {
-      width: '100%',
-      height: '100vh',
+      height: '96vh',
       backgroundImage: `url(${ srcImg })`,
+      backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
-      background: 'cover'
+      backgroundPosition: 'center',
     } }>
       { children }
     </Box>
