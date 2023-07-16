@@ -18,7 +18,9 @@ export const BackgroundSection: React.FC<BackgroundSectionProps> = ({
     <Box sx={ {
       width: '100%',
       height: '100vh',
-      backgroundImage: `url(${ srcImg })`
+      backgroundImage: `url(${ srcImg })`,
+      backgroundRepeat: 'no-repeat',
+      background: 'cover'
     } }>
       { children }
     </Box>
