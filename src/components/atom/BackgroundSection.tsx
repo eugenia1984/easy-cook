@@ -7,16 +7,18 @@ import { Box } from '@mui/material'
  */
 interface BackgroundSectionProps {
   srcImg?: string
+  srcHeight?: string
   children?: React.ReactNode
 }
 
 export const BackgroundSection: React.FC<BackgroundSectionProps> = ({
   srcImg,
+  srcHeight,
   children
 }) => {
   return (
     <Box sx={ {
-      height: '96vh',
+      height: `${ srcHeight ? srcHeight : '96vh' }`,
       backgroundImage: `url(${ srcImg })`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
