@@ -8,10 +8,10 @@ export type alignHeadline = 'right' | 'left' | 'center' | 'justify'
 
 // Home sliders Latest Recipes section
 export type HomeSlides = {
-  sliders: Slider[]
+  sliders: Slide[]
 }
 
-export type Slider = {
+export type Slide = {
   id: number
   title: string
   image: string

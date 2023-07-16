@@ -28,6 +28,8 @@
 
 - [axios](https://axios-http.com/docs/intro)
 
+- [swiperjs](https://swiperjs.com/), para los sliders
+
 ---
 
 ## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/>  LINKS
