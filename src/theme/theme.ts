@@ -197,21 +197,21 @@ export const easyCookTheme = createTheme({
         },
         text: {
           '&.Mui-focusVisible': {
-            backgroundColor: '#BFBFBF',
+            backgroundColor: '#095C3C',
           },
           ':hover': {
-            backgroundColor: '#BFBFBF',
+            backgroundColor: '#095C3C',
           }
         },
         outlined: {
           border: '2px solid',
           ':hover': {
             border: '2px solid',
-            background: 'rgba(18, 38, 170, 0.1)',
+            background: '#015220',
           },
           ':focus': {
             color: 'white',
-            background: '#1226AA'
+            background: '#095C3CA'
           },
           '&.Mui-disabled': {
             border: '2px solid #8F9193',
@@ -221,10 +221,10 @@ export const easyCookTheme = createTheme({
         containedPrimary: {
           background: '#049C3D',
           ':hover': {
-            backgroundColor: 'linear-gradient(270deg, #1226AA 0%, #121A52 103.21%)'
+            backgroundColor: 'linear-gradient(270deg, #016627 0%, #014f1e 103.21%)'
           },
           ':focus': {
-            backgroundColor: '#121A52'
+            backgroundColor: '#014f1e'
           },
           '&.Mui-disabled': {
             background: '#8F9193',

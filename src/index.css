@@ -4,5 +4,23 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  --primary: #049C3D;
+  --secondary: #DF3045;
+  --error: #CD1812;
+  --error-border-color: #CD1812;
+  --warning: #FFBA33;
+  --success: #1C8747;
+  --primary-blackish: #015220;
+  --primary-background: #E7E9F7;
+  --primary-background2: #F1F2FA;
+  --btn-primary: #049C3D;
+  --btn-primary-focus-visible: #095C3C;
+  --btn-primary-hover: #095C3C;
+  --btn-primary-outline-hover: #015220;
+  --btn-primary-focus: #095C3C;
+  --btn-primary-sicabled: #8F9193;
+  --btn-contained-primary: #049C3D;
+  --btn-contained-primary-focus: #014f1e;
+  --btn-contained-primary-disabled-background: #8F9193;
 }
 

@@ -5,6 +5,7 @@ import * as Yup from 'yup'
 import { Headline } from '../../atom/Headline'
 import './LoginForm.styles.css'
 import { IFormStatus, ISignUpForm, formStatusProps, initialValues } from './LoginForm.d'
+import PrimaryButton from '../../atom/PrimaryButton'
 
 interface LoginFormProps {
   title: string
@@ -175,14 +176,11 @@ export const LoginForm: React.FC<LoginFormProps> = ({ title }) => {
                       item
                       className="submitButton"
                     >
-                      <Button
+                      <PrimaryButton
+                        textBtn='SING IN'
                         type="submit"
-                        variant="contained"
-                        color="primary"
                         disabled={ isSubmitting }
-                      >
-                        SIGN IN
-                      </Button>
+                      />
                       { displayFormStatus && (
                         <div className="formStatus">
                           { formStatus.type === 'error' ? (
