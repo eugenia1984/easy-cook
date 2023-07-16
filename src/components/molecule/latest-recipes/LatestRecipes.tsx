@@ -5,8 +5,8 @@ import 'swiper/css/navigation'
 import { Navigation } from 'swiper/modules'
 import { Headline } from '../../atom/Headline'
 import slidersJSON from './../../../api/home-sliders.json'
-import './LatestRecipes.styles.css'
 import { ImageTitleCard } from '../../atom/ImageTitleCard'
+import './LatestRecipes.styles.css'
 
 interface LatestRecipesProps {
   title: string
@@ -16,12 +16,13 @@ export const LatestRecipes: React.FC<LatestRecipesProps> = ({ title }) => {
   const { sliders } = slidersJSON
 
   return (
-    <main>
+    <section>
       <Headline
         title={ title }
         alignHeadline='left'
         variantHeadline='h2'
         colorHeadline='black'
+        padding='2.75rem 0rem 0rem'
       />
       <Container maxWidth="xl">
         <Swiper
@@ -41,6 +42,6 @@ export const LatestRecipes: React.FC<LatestRecipesProps> = ({ title }) => {
 
         </Swiper>
       </Container>
-    </main>
+    </section>
   )
 }

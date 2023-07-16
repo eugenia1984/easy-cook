@@ -27,9 +27,15 @@
   margin: 20px auto;
 }
 
-.swiper-button-prev, 
+@media screen and (max-width: 670px) {
+  .swiper {
+    height: 300px !important;
+  }
+}
+
+.swiper-button-prev,
 .swiper-button-next {
-  color: #F1F2FA;
+  color: #f1f2fa;
   background-color: #015220;
   padding: 2rem;
   border-radius: 50%;
