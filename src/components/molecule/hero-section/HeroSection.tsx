@@ -35,7 +35,7 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
             variantHeadline='h1'
           />
           <Headline
-            title='Thousands of Recipes. Endless Inspiration..'
+            title='Thousands of Recipes. Endless Inspiration.'
             colorHeadline='#fff'
             variantHeadline='h2'
           />
