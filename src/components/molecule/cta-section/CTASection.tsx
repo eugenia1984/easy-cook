@@ -41,6 +41,10 @@ export const CTASection: React.FC<CTASectionProps> = () => {
           />
           <PrimaryButton
             textBtn='DISCOVER'
+            sx={{
+              padding: '1rem 2rem',
+              letterSpacing: '2px'
+            }}
           />
         </Box>
       </BackgroundSection>

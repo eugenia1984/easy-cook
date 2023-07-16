@@ -33,6 +33,10 @@ export const NotFound: React.FC<NotFoundProps> = () => {
         />
         <PrimaryButton
           textBtn='BACK TO HOME'
+          sx={{
+            padding: '1rem 2rem',
+            letterSpacing: '1px'
+          }}
           onClick={ handleClick }
         />
       </Box>

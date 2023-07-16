@@ -41,6 +41,10 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
           />
           <PrimaryButton
             textBtn='TRY IT FOR FREE'
+            sx={{
+              padding: '1rem 2rem',
+              letterSpacing: '1px'
+            }}
           />
         </Box>
       </BackgroundSection>
