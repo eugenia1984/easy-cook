@@ -9,7 +9,7 @@ export default (): [boolean, Function, Function] => {
   const removeLoading = () => setTimeout(() => setLoaders(prevState => prevState - 1), 2000)
 
   useEffect(() => {
-    setLoading(loaders > 0)
+    // setLoading(loaders > 0)
   }, [loaders])
 
   return [loading, addLoading, removeLoading]
