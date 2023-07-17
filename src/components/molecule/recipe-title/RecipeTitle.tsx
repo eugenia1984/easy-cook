@@ -12,21 +12,23 @@ interface RecipeTitleProps {
   image: string
 }
 
-export const RecipeTitle: React.FC<RecipeTitleProps> = ({ 
-  title, 
+export const RecipeTitle: React.FC<RecipeTitleProps> = ({
+  title,
   hashes,
-  image 
+  image
 }) => {
   const filteredHashes = Object.entries(hashes).filter(([key, value]) => value)
   return (
-    <Box sx={ { background: '#DCDDE3' } }>
+    <Box sx={ { background: '#DCDDE3', marginBottom: '160px' } }>
       <Paper
         sx={ {
           background: '#C3C4C9',
           maxWidth: '800px',
           margin: '0px auto',
-          display: 'flex'
+          position: 'relative',
+          top: '100px'
         } }
+        elevation={24}
       >
         <Grid container>
           <Grid item xs={ 12 } sm={ 6 }>
@@ -38,7 +40,7 @@ export const RecipeTitle: React.FC<RecipeTitleProps> = ({
             </Typography>
           </Grid>
           <Grid item xs={ 12 } sm={ 6 }>
-            <img src={ image } alt={ title } width='100%' />
+            <img src={ image } alt={ title } width='100%' height='100%' />
           </Grid>
         </Grid>
       </Paper>

@@ -1,12 +1,21 @@
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import recipeById from '../api/recipe-by-id-mock.json'
-import { RecipeTitle } from '../components/molecule/recipe-title/REcipeTitle'
+import { RecipeInstructions } from '../components/molecule/recipe-instructions/RecipeInstructions'
+
+import { RecipeTitle } from '../components/molecule/recipe-title/RecipeTitle'
 
 interface RecipeProps {
-
 }
 
 export const Recipe: React.FC<RecipeProps> = () => {
-  console.log(recipeById)
+  const { id } = useParams()
+  const [recipe, setRecipe] = useState(recipeById)
+  console.log(id)
+  useEffect(() => {
+    // TODO: el llamado a la APi para setear recipe acorde al id
+    // que recibo por URL y sacar le JSOn de prueba
+  }, [])
   const {
     title,
     vegetarian,
@@ -17,8 +26,11 @@ export const Recipe: React.FC<RecipeProps> = () => {
     veryPopular,
     sustainable,
     image,
-    analyzedInstructions
-  } = recipeById
+    extendedIngredients,
+    analyzedInstructions,
+    diets,
+    readyInMinutes
+  } = recipe
   const hashes = {
     vegetarian,
     vegan,
@@ -28,13 +40,20 @@ export const Recipe: React.FC<RecipeProps> = () => {
     veryPopular,
     sustainable
   }
-  // TODO: aca queda para las instrucciones
-  console.log('analyzedInstructions', analyzedInstructions[0].steps)
-  const arryInstructions = analyzedInstructions[0].steps.map(item => item.step)
-  console.log('arryInstructions', arryInstructions)
+
   return (
     <main>
-      <RecipeTitle title={title} hashes={hashes} image={image} />
+      <RecipeTitle
+        title={ title }
+        hashes={ hashes }
+        image={ image }
+      />
+      <RecipeInstructions
+        extendedIngredients={ extendedIngredients }
+        analyzedInstructions={ analyzedInstructions }
+        diets={ diets }
+        readyInMinutes={ readyInMinutes }
+      />
     </main>
   )
 }
