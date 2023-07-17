@@ -44,7 +44,11 @@ export const RecipeInstructions: React.FC<RecipeInstructionsProps> = ({
             { extendedIngredients &&
               extendedIngredients.map((element, index) =>
                 <ListItem key={ `${ index }-${ element.name }` }>
-                  { element.measures?.metric.amount } { element.measures?.metric.unitShort } { element.name }
+                  <img
+                    src={ `https://spoonacular.com/cdn/ingredients_100x100/${ element.image }` }
+                    alt={ element.name }
+                    width='50px'
+                  /> { element.measures?.metric.amount } { element.measures?.metric.unitShort } { element.name }
                 </ListItem>) }
           </List>
           <Headline
@@ -58,6 +62,7 @@ export const RecipeInstructions: React.FC<RecipeInstructionsProps> = ({
                 <img
                   src={ `https://spoonacular.com/cdn/equipment_100x100/${ element.equipment[0].image }` }
                   width='50px'
+                  alt={ element.equipment[0].name }
                 /> { element.equipment[0].name }
               </ListItem>
             ) }
