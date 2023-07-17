@@ -43,7 +43,10 @@ export const RecipeInstructions: React.FC<RecipeInstructionsProps> = ({
           <List sx={ { width: '90%', margin: '0px auto' } }>
             { extendedIngredients &&
               extendedIngredients.map((element, index) =>
-                <ListItem key={ `${ index }-${ element.name }` }>
+                <ListItem
+                  key={ `${ index }-${ element.name }` }
+                  sx={ { gap: '8px' } }
+                >
                   <img
                     src={ `https://spoonacular.com/cdn/ingredients_100x100/${ element.image }` }
                     alt={ element.name }
@@ -86,7 +89,7 @@ export const RecipeInstructions: React.FC<RecipeInstructionsProps> = ({
             }
           </List>
           <Headline
-            title={ `Requires approximately ${ readyInMinutes } minutes` }
+            title={ `Ready in ${ readyInMinutes } minutes` }
             alignHeadline='left'
             variantHeadline='h3'
             colorHeadline='black'

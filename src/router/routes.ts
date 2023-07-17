@@ -7,6 +7,6 @@ export const publicRoutes = {
 
 export const privateRoutes = {
   SEARCH: '/search',
-  RECIPE_BY_ID: `/recipe/:idRecipe`,
+  RECIPE_BY_ID: '/recipe/:idRecipe',
   FAVORITES: '/favorites',
 }

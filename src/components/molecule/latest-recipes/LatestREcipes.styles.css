@@ -23,13 +23,13 @@
 
 .swiper {
   width: 100%;
-  height: 390px;
+  height: 490px;
   margin: 20px auto;
 }
 
 @media screen and (max-width: 670px) {
   .swiper {
-    height: 300px !important;
+    height: 400px !important;
   }
 }
 
@@ -43,4 +43,8 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+}
+
+.mySwiper {
+  margin-bottom: 40px;
 }

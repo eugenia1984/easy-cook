@@ -19,7 +19,7 @@ function App() {
           <Route path={ publicRoutes.LOGIN } element={ <Login title="Login" /> } />
           <Route path={ publicRoutes.CONTACT } element={ <Contact title="Contact" /> } />
           <Route path={ privateRoutes.SEARCH } element={ <Search title="Search" /> } />
-          <Route path={ privateRoutes.RECIPE_BY_ID } element={ <Recipe title="Recipe" /> } />
+          <Route path={ privateRoutes.RECIPE_BY_ID } element={ <Recipe /> } />
           <Route path={ privateRoutes.FAVORITES } element={ <Favorites title="Favorites" /> } />
           <Route path={ publicRoutes.NOT_FOUND } element={ <NotFound /> } />
         </Route>

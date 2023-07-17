@@ -26,17 +26,35 @@ export const LatestRecipes: React.FC<LatestRecipesProps> = ({ title }) => {
       />
       <Container maxWidth="xl">
         <Swiper
-          slidesPerView={ 3 }
-          centeredSlides={ false }
+          centeredSlides={ true }
           spaceBetween={ 30 }
           navigation={ true }
           modules={ [Navigation] }
+          breakpoints={ {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            420: {
+              slidesPerView: 2,
+              spaceBetween: 25,
+            },
+            899: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1199: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+          } }
           className="mySwiper"
         >
           { sliders.map(slide => <SwiperSlide key={ slide.id }>
             <ImageTitleCard
               imgSrc={ slide.image }
               imgTitle={ slide.title }
+              recipeId={slide.id}
             />
           </SwiperSlide>) }
 
