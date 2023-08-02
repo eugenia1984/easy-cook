@@ -6,9 +6,9 @@ export type colorBtn = 'inherit' | 'primary' | 'secondary' | 'success' | 'error'
 export type variantHeadline = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle1' | 'subtitle2'
 export type alignHeadline = 'right' | 'left' | 'center' | 'justify'
 
-/********************************************
-*** Home sliders Latest Recipes section **** 
-********************************************/
+/**********************************************
+***  Home sliders Latest Recipes section  **** 
+**********************************************/
 export type HomeSlides = {
   sliders: Slide[]
 }
@@ -25,9 +25,9 @@ export enum ImageType {
   Png = "png"
 }
 
-/*************************************
-**********  Recipe by ID   **********
-*************************************/
+/***************************************
+**********   Recipe by ID    **********
+***************************************/
 export type RecipeByID = {
   vegetarian: boolean
   vegan: boolean

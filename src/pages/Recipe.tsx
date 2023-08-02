@@ -1,24 +1,27 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import recipeById from '../api/recipe-by-id-mock.json'
+import { Typography } from '@mui/material'
 import { RecipeInstructions } from '../components/molecule/recipe-instructions/RecipeInstructions'
 import { RecipeTitle } from '../components/molecule/recipe-title/RecipeTitle'
-import useLoading from '../hooks/useLoading'
+import { useSpinner } from '../context/SpinnerProvider'
+import { RecipeByID } from '../utils/types'
+import { recipeId782585 } from '../utils/recipeId782585'
 
 interface RecipeProps {
 }
 
 export const Recipe: React.FC<RecipeProps> = () => {
-  const param  = useParams<{idRecipe: string}>()
+  const { addLoading, removeLoading } = useSpinner()
+  const param = useParams<{ idRecipe: string }>()
   const idRecipe = param.idRecipe
-  const [recipe, setRecipe] = useState<any>(recipeById)
+  const [recipe, setRecipe] = useState<RecipeByID>(recipeId782585)
   const [error, setError] = useState<string | null>(null)
-  const URL = `https://api.spoonacular.com/recipes/${idRecipe}/information?apiKey=53a439d043394e38a4d1b891ad903e34`
+  const URL = `https://api.spoonacular.com/recipes/${ idRecipe }/information?apiKey=53a439d043394e38a4d1b891ad903e34`
 
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        //addLoading()
+        addLoading()
         const response = await fetch(URL)
         if (!response.ok) {
           throw new Error('Error HTTP: ' + response.status)
@@ -28,12 +31,12 @@ export const Recipe: React.FC<RecipeProps> = () => {
       } catch (error) {
         setError(error.message)
       } finally {
-        //removeLoading()
+        removeLoading()
       }
     }
 
     fetchRecipe()
-  }, [idRecipe])
+  }, []) //idRecipe
 
   useEffect(() => {
     // Aquí puedes hacer algo con el estado "recipe" o "error" si lo necesitas.
@@ -46,7 +49,7 @@ export const Recipe: React.FC<RecipeProps> = () => {
       console.error('Error fetching recipe:', error);
     }
   }, [recipe, error]);
-  
+
   const {
     title,
     vegetarian,
@@ -74,17 +77,24 @@ export const Recipe: React.FC<RecipeProps> = () => {
 
   return (
     <main>
-      <RecipeTitle
-        title={ title }
-        hashes={ hashes }
-        image={ image }
-      />
-      <RecipeInstructions
-        extendedIngredients={ extendedIngredients }
-        analyzedInstructions={ analyzedInstructions }
-        diets={ diets }
-        readyInMinutes={ readyInMinutes }
-      />
+      { !recipe ?
+        <Typography>Loading</Typography>
+        :
+        <>
+          <RecipeTitle
+            title={ title }
+            hashes={ hashes }
+            image={ image }
+          />
+          <RecipeInstructions
+            extendedIngredients={ extendedIngredients }
+            analyzedInstructions={ analyzedInstructions }
+            diets={ diets }
+            readyInMinutes={ readyInMinutes }
+          />
+        </>
+      }
+
     </main>
   )
 }
