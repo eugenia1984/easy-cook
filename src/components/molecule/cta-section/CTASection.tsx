@@ -3,6 +3,7 @@ import { BackgroundSection } from '../../atom/BackgroundSection'
 import ctaImage from '../../../assets/recipes_pattern.jpg'
 import { Headline } from '../../atom/Headline'
 import PrimaryButton from '../../atom/PrimaryButton'
+import { TEXT_HOME } from '../../../utils/lenguage'
 
 interface CTASectionProps {
 
@@ -30,20 +31,21 @@ export const CTASection: React.FC<CTASectionProps> = () => {
           gap: '1rem'
         } }>
           <Headline
-            title='Explore all our recipes'
+            title={TEXT_HOME.ctaSectionTitle}
             colorHeadline='#fff'
             variantHeadline='h2'
           />
           <Headline
-            title='Discover all EasyCook® has to offer, with over 70,000 triple-tested recipes all with innovative Guided Cooking functionality.'
+            title={TEXT_HOME.ctaSectionText}
             colorHeadline='#fff'
             variantHeadline='h3'
           />
           <PrimaryButton
-            textBtn='DISCOVER'
+            textBtn={TEXT_HOME.ctsSectionBTn}
             sx={{
               padding: '1rem 2rem',
-              letterSpacing: '2px'
+              letterSpacing: '2px',
+              textTransform: 'uppercase'
             }}
           />
         </Box>

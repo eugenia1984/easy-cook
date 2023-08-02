@@ -7,11 +7,12 @@ import {
 } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import PrimaryButton from './PrimaryButton'
+import { TEXT_HOME } from '../../utils/lenguage'
 
 interface ImageTitleCardProps {
   imgSrc: string
   imgTitle: string
-  recipeId: string
+  recipeId: number
 }
 
 export const ImageTitleCard: React.FC<ImageTitleCardProps> = ({
@@ -26,14 +27,14 @@ export const ImageTitleCard: React.FC<ImageTitleCardProps> = ({
       <Card sx={ { maxWidth: 345 } }>
         <CardMedia
           component="img"
-          alt="green iguana"
+          alt={imgTitle}
           height="140"
           image={ imgSrc }
         />
-        <CardContent sx={ { 
+        <CardContent sx={ {
           padding: '6px !important',
-          minHeight: { xs: '92px', sm: '92px', md: '86px' } 
-          } }>
+          minHeight: { xs: '92px', sm: '92px', md: '86px' }
+        } }>
           <Typography
             gutterBottom
             variant="h5"
@@ -46,8 +47,8 @@ export const ImageTitleCard: React.FC<ImageTitleCardProps> = ({
             { imgTitle }
           </Typography>
           <PrimaryButton
-            textBtn='+info'
-            sx={{padding: '4px 8px', margin: '4px 4px 8px 4px'}}
+            textBtn={TEXT_HOME.latestRecipesBtn}
+            sx={ { padding: '4px 8px', margin: '4px 4px 8px 4px' } }
             onClick={ () => navigate(`/recipe/${ recipeId }`) }
           />
         </CardContent>
