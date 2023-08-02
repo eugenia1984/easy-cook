@@ -3,49 +3,28 @@ import { BackgroundSection } from '../../atom/BackgroundSection'
 import heroImage from '../../../assets/hero-pic.jpg'
 import { Headline } from '../../atom/Headline'
 import PrimaryButton from '../../atom/PrimaryButton'
+import { TEXT_HOME } from '../../../utils/lenguage'
+import { heroSectionStyles } from './HeroSectionStyles'
 
 interface HeroSectionProps {
-
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
     <section>
       <BackgroundSection srcImg={ heroImage } srcHeight='520px'>
-        <Box sx={ {
-          background: 'linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.5))',
-          height: '100%',
-          zIndex: 1,
-          padding: {
-            xs: '1rem 2rem',
-            sm: '1rem 5rem',
-            md: '1rem 9rem'
-          },
-          display: 'flex',
-          flexDirection: 'column',
-          flexWrap: 'wrap',
-          alignContent: 'center',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '1rem'
-        } }>
+        <Box sx={ heroSectionStyles.container }>
           <Headline
-            title='Join EasyCook'
+            title={ TEXT_HOME.h1 }
             colorHeadline='#fff'
             variantHeadline='h1'
           />
           <Headline
-            title='Thousands of Recipes. Endless Inspiration.'
+            title={ TEXT_HOME.h2 }
             colorHeadline='#fff'
             variantHeadline='h2'
           />
-          <PrimaryButton
-            textBtn='TRY IT FOR FREE'
-            sx={{
-              padding: '1rem 2rem',
-              letterSpacing: '1px'
-            }}
-          />
+          <PrimaryButton textBtn={ TEXT_HOME.heroBtn } sx={ heroSectionStyles.ctaBtn } />
         </Box>
       </BackgroundSection>
     </section>
