@@ -5,7 +5,7 @@ import 'swiper/css/navigation'
 import { Navigation } from 'swiper/modules'
 import { Headline } from '../../atom/Headline'
 import slidersJSON from './../../../api/home-sliders.json'
-import { ImageTitleCard } from '../../atom/ImageTitleCard'
+import { ImageTitleCard } from '../../atom/img-title-card/ImageTitleCard'
 import './LatestRecipes.styles.css'
 
 interface LatestRecipesProps {
@@ -54,7 +54,7 @@ export const LatestRecipes: React.FC<LatestRecipesProps> = ({ title }) => {
             <ImageTitleCard
               imgSrc={ slide.image }
               imgTitle={ slide.title }
-              recipeId={slide.id}
+              recipeId={ slide.id }
             />
           </SwiperSlide>) }
 

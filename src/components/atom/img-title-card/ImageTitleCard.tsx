@@ -6,8 +6,9 @@ import {
   Typography
 } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
-import PrimaryButton from './PrimaryButton'
-import { TEXT_HOME } from '../../utils/lenguage'
+import PrimaryButton from '../PrimaryButton'
+import { TEXT_HOME } from '../../../utils/lenguage'
+import { ImageTitleCardStyles } from './ImageTitleCardStyles'
 
 interface ImageTitleCardProps {
   imgSrc: string
@@ -23,32 +24,27 @@ export const ImageTitleCard: React.FC<ImageTitleCardProps> = ({
   const navigate = useNavigate()
 
   return (
-    <Box sx={ { width: '90%', margin: '0.25rem auto' } }>
+    <Box sx={ ImageTitleCardStyles.boxContainer }>
       <Card sx={ { maxWidth: 345 } }>
         <CardMedia
           component="img"
-          alt={imgTitle}
+          alt={ imgTitle }
           height="140"
           image={ imgSrc }
         />
-        <CardContent sx={ {
-          padding: '6px !important',
-          minHeight: { xs: '92px', sm: '92px', md: '86px' }
-        } }>
+        <CardContent sx={ ImageTitleCardStyles.cardContent }>
           <Typography
             gutterBottom
             variant="h5"
             component="div"
-            sx={ {
-              minHeight: { xs: '62px', sm: '52px', md: '56px' }
-            } }
+            sx={ ImageTitleCardStyles.title }
             padding='8px 8px 0px 8px'
           >
             { imgTitle }
           </Typography>
           <PrimaryButton
-            textBtn={TEXT_HOME.latestRecipesBtn}
-            sx={ { padding: '4px 8px', margin: '4px 4px 8px 4px' } }
+            textBtn={ TEXT_HOME.latestRecipesBtn }
+            sx={ ImageTitleCardStyles.btn }
             onClick={ () => navigate(`/recipe/${ recipeId }`) }
           />
         </CardContent>

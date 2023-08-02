@@ -3,50 +3,30 @@ import { BackgroundSection } from '../../atom/BackgroundSection'
 import ctaImage from '../../../assets/recipes_pattern.jpg'
 import { Headline } from '../../atom/Headline'
 import PrimaryButton from '../../atom/PrimaryButton'
-import { TEXT_HOME } from '../../../utils/lenguage'
+import { TEXT_HOME_CTA_SECTION } from '../../../utils/lenguage'
+import { CTASectionStyles } from './CTASectionStyles'
 
 interface CTASectionProps {
-
 }
 
 export const CTASection: React.FC<CTASectionProps> = () => {
   return (
     <section>
       <BackgroundSection srcImg={ ctaImage } srcHeight='520px'>
-        <Box sx={ {
-          background: 'linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.5))',
-          height: '100%',
-          zIndex: 1,
-          padding: {
-            xs: '1rem 2rem',
-            sm: '1rem 5rem',
-            md: '1rem 9rem'
-          },
-          display: 'flex',
-          flexDirection: 'column',
-          flexWrap: 'wrap',
-          alignContent: 'center',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '1rem'
-        } }>
+        <Box sx={ CTASectionStyles.boxContainer }>
           <Headline
-            title={TEXT_HOME.ctaSectionTitle}
+            title={ TEXT_HOME_CTA_SECTION.title }
             colorHeadline='#fff'
             variantHeadline='h2'
           />
           <Headline
-            title={TEXT_HOME.ctaSectionText}
+            title={ TEXT_HOME_CTA_SECTION.text }
             colorHeadline='#fff'
             variantHeadline='h3'
           />
-          <PrimaryButton
-            textBtn={TEXT_HOME.ctsSectionBTn}
-            sx={{
-              padding: '1rem 2rem',
-              letterSpacing: '2px',
-              textTransform: 'uppercase'
-            }}
+          <PrimaryButton 
+            textBtn={ TEXT_HOME_CTA_SECTION.btn }
+            sx={ CTASectionStyles.btn }
           />
         </Box>
       </BackgroundSection>
