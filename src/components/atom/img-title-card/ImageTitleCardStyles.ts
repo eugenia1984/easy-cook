@@ -5,7 +5,11 @@ export const ImageTitleCardStyles = {
   },
   cardContent: {
     padding: '6px !important',
-    minHeight: { xs: '92px', sm: '92px', md: '86px' }
+    minHeight: { 
+      xs: '92px', 
+      sm: '92px', 
+      md: '86px' 
+    }
   },
   title: {
     minHeight: {
