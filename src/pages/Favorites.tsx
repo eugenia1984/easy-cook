@@ -1,13 +1,5 @@
-import { Headline } from "../components/atom/Headline"
+const Favorites = () => {
+  return <div>Favorites</div>;
+};
 
-interface FavoritesProps {
-  title: string
-}
-
-export const Favorites: React.FC<FavoritesProps> = ({ title }) => {
-  return (
-    <main>
-      <Headline title={title}/>
-    </main>
-  )
-}
+export default Favorites;

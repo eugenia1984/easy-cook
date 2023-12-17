@@ -1,13 +1,5 @@
-import { Headline } from "../components/atom/Headline"
+const Search = () => {
+  return <div>Search</div>;
+};
 
-interface SearchProps {
-  title: string
-}
-
-export const Search: React.FC<SearchProps> = ({ title }) => {
-  return (
-    <main>
-      <Headline title={title}/>
-    </main>
-  )
-}
+export default Search;
