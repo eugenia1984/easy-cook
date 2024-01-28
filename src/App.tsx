@@ -1,7 +1,13 @@
+import { ThemeProvider } from "styled-components";
+import { theme } from "./theme/theme";
 import "./App.css";
 
+
 function App() {
-  return <>Easy-Cook</>;
+  return
+  <ThemeProvider theme={theme}>
+    Easy-Cook
+  </ThemeProvider>;
 }
 
 export default App;

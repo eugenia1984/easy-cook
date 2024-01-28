@@ -1,0 +1,22 @@
+export const theme = {
+  colors: {
+    primary: "#049c3d",
+    secondary: "#df3045",
+    error: "#cd1812",
+    errorBorderColor: "#cd1812",
+    warning: "#ffba33",
+    success: "#1c8747",
+    primaryBlackish: "#015220",
+    primaryBackground: "#e7e9f7",
+    primaryBackground2: "#f1f2fa",
+    btnPrimary: "#049c3d",
+    btnPrimaryFocusVisible: "#095c3c",
+    btnPrimaryHover: "#095c3c",
+    btnPrimaryOutlineHover: "#015220",
+    btnPrimaryFocus: "#095c3c",
+    btnPrimaryDisabled: "#8f9193",
+    btnContainedPrimary: "#049c3d",
+    btnContainedPrimaryFocus: "#014f1e",
+    btnContainedPrimaryDisabledBackground: "#8f9193",
+  },
+};
