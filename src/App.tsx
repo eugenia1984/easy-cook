@@ -10,7 +10,8 @@ import { Login } from "./pages";
 import "./App.css";
 
 function App() {
-  const [isUserAuth, setIsUserAuth] = useState<boolean>(true)
+  const [isUserAuth, setIsUserAuth] = useState<boolean>(true);
+
   return (
     <RouteNotFound>
       {!isUserAuth && <Route path={PUBLIC_ROUTES.LOGIN} element={<Login />} />}

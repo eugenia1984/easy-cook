@@ -79,6 +79,37 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
 
 ---
 
+## Folder structure
+
+```
+> node_modules
+> public
+> src
+  > api
+  > assets
+  > components
+    > sections
+    > ui
+  > layouts
+  > models
+    > types
+  > pages
+  > routes
+  > theme
+  > utils
+  .eslintrc.js
+  .gitignore
+  index.html
+  package-lock.json
+  packege.json
+  README.md
+  tsconfig.json
+  stconfig.node.json
+  vite.config.ts
+```
+
+---
+
 ## Image in `assets` folrder example:
 
 ```TSX
