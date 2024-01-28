@@ -24,11 +24,14 @@
 
 ## <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> MVP (Minimum Product Viable)
 
--Create a React Application, to have the Front End for **Easy-Cook**, an app qhere you can:
+- Create a React Application, to have the Front End for **Easy-Cook**, an app where you can:
 
-- Register
+- Login with:
 
-- Login
+```
+user: test
+password: testing
+```
 
 - Search recipies
 
@@ -36,9 +39,7 @@
 
 - See the recipe detail page
 
-Crear el **FrontEnd** para un **sitio** que consuma una **API pública**, utilizando:
-
-- All the styles were created with **module.css**, no need to use a Framework.
+Create the **FrontEnd** for a **web site** that use a **public API**, using:
 
 - All the recipes information are fetch with an **API** (Spoonacular)
 
@@ -72,15 +73,13 @@ Crear el **FrontEnd** para un **sitio** que consuma una **API pública**, utiliz
 
 ### <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> OPTIONAL REQUIREMENTS
 
-- Roles** or **user permissions\*\* according to role.
-
 - **Publish** the website on an online hosting.
 
-- Add **good SEO practices**. Explain five (5) changes or improvements made and how they would impact the SEO of the project.
+- Add **good SEO practices**.
 
 ---
 
-## Dejo ejemplo de como utilizar imagenes tanto desde public como assets
+## Image in `assets` folrder example:
 
 ```TSX
 import reactLogo from './assets/react.svg'
@@ -108,6 +107,8 @@ export default App
 ```
 
 ---
+
+## Note
 
 I appreciate your interest in this Project ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me at [LinkedIn - maria-eugenia-costa](https://www.linkedin.com/in/maria-eugenia-costa/)
 
