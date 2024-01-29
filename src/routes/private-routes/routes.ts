@@ -1,5 +1,5 @@
 export enum PRIVATE_ROUTES {
-  HOME = "/",
+  HOME = "/home",
   SEARCH = "/search",
   RECIPE_BY_ID = "/recipe/:idRecipe",
   CONTACT = "/contact",
