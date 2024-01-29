@@ -1,3 +1,9 @@
+import { NoAuthLayout } from "../layouts";
+
 export const Login = () => {
-  return <div>Login</div>;
+  return (
+    <NoAuthLayout>
+      Login Form
+    </NoAuthLayout>
+  )
 };

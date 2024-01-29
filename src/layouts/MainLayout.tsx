@@ -1,5 +1,9 @@
-const MainLayout = () => {
-  return <div>MainLayout</div>;
+export const MainLayout = () => {
+  return (
+    <main>
+      <header>Header</header>
+      <footer>footer</footer>
+    </main>
+  )
 };
 
-export default MainLayout;
