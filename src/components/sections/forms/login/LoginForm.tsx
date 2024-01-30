@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -26,15 +26,17 @@ export const LoginForm = () => {
     setPasswordInput(e.target.value);
   };
 
+  useEffect(() => {
+    if (isAuth) {
+      navigate(PRIVATE_ROUTES.HOME);
+    }
+  }, [isAuth, navigate]);
+
   const handleLogin = () => {
 
     if (emailInput === "admin@email.com"
       && passwordInput === "123456") {
       login();
-      if (isAuth) {
-        navigate(PRIVATE_ROUTES.HOME);
-      }
-
     } else {
       setErrorEmail('X - E-mail must be: admin@email.com');
       setErrorPassword('X - Password must be: 123456');

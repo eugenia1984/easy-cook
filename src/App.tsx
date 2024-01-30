@@ -1,19 +1,19 @@
-import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { PRIVATE_ROUTES, PUBLIC_ROUTES } from "./routes";
 import { Contact, Home, Login, NotFound, Recipe, Search } from "./pages";
 
 import "./App.css";
+import { useUserStore } from "./store";
 
 function App() {
-  const [isUserAuth, setIsUserAuth] = useState<boolean>(false);
+  const { isAuth } = useUserStore();
 
   return (
     <BrowserRouter>
       <Routes>
         {
-          !isUserAuth ?
+          !isAuth ?
             <Route path={PUBLIC_ROUTES.LOGIN} element={<Login />} />
             :
             <>
