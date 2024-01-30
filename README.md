@@ -12,7 +12,9 @@
 
 - <img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript icon"/> TypeScript
 
-- [axios](https://axios-http.com/docs/intro)
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction), for general states
+
+- [axios](https://axios-http.com/docs/intro), for fetching data
 
 ---
 
@@ -33,9 +35,9 @@ user: test
 password: testing
 ```
 
-- Search recipies
+- Search recipes
 
-- Add recipies to favorites list
+- Add recipes to favorites list
 
 - See the recipe detail page
 
@@ -51,11 +53,11 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
 
 - That can be **browsed from a PC or cell phone without losing information**.
 
-- 2 sections** of **static content\*\*.
+- 2 sections of \*\*static content\*\*
 
-- 1 section** of **dynamic content** consuming **public API\*\* of your choice.
+- 1 section of **dynamic content** consuming \*\*public API\*\* of your choice.
 
-- 1 section** with a **contact form\*\* (front-end implementation only).
+- 1 section with a \*\*contact form\*\* (front-end implementation only).
 
 - 1 user/key protected section that allows to have a private area.
 
