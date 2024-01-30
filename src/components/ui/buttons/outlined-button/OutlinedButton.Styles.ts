@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  color: var(--btn-primary);
+  color: ${(props) => props.theme.colors.btnPrimary};
   background-color: transparent;
   border-radius: 4px;
   cursor: pointer;
@@ -18,7 +18,7 @@ export const Button = styled.button`
   border: 0;
 
   &:hover {
-    border-color: var(--border-hover-outlined);
-    color: var(--border-hover-outlined);
+    border-color: ${(props) => props.theme.colors.borderHoverOutlined};
+    color: ${(props) => props.theme.colors.borderHoverOutlined});
   }
 `;

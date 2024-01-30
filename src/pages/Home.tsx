@@ -1,3 +1,9 @@
+import { MainLayout } from "../layouts";
+
 export const Home = () => {
-  return <div>Home</div>;
+  return (
+    <MainLayout>
+      Home
+    </MainLayout>
+  );
 };

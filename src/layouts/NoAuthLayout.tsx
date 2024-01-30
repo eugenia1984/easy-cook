@@ -1,8 +1,9 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
+
 import { Footer, Header } from "../components/sections";
 
 type NoAuthLayoutProps = {
-  children: React.ReactNode
+  children: ReactNode;
 }
 
 export const NoAuthLayout: FC<NoAuthLayoutProps> = ({ children }) => {

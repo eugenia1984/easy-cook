@@ -7,7 +7,7 @@ export const Footer = () => {
   const { isAuth } = useUserStore();
   return (
     <AppFooter>
-      <NormalText text={`© ​Copyright ${YEAR.toString()}`} textColor="var(--txt-color-disabled)" />
+      <NormalText text={`© ​Copyright ${YEAR.toString()}`} textcolor="var(--txt-color-disabled)" />
       {
         isAuth &&
         <>

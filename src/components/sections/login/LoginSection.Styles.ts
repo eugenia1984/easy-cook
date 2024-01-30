@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Section = styled.section`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.primaryBackground3};
   border-radius: 5px;
   margin: 3rem auto;
   padding: 2rem 2.5rem;

@@ -3,15 +3,15 @@ import { TitleH2 } from "./HeadlineH2.Styles";
 
 type HeadlineH2Props = {
   text: string;
-  textColor?: string;
+  textcolor?: string;
 };
 
 export const HeadlineH2: FC<HeadlineH2Props> = ({
   text,
-  textColor
+  textcolor
 }) => {
   return (
-    <TitleH2 textColor={textColor}>
+    <TitleH2 textcolor={textcolor}>
       {text}
     </TitleH2>
   )

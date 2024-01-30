@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
-interface TitleH1Props {
+interface TextNormalProps {
   textcolor?: string;
 }
 
-export const TitleH1 = styled.h1<TitleH1Props>`
-  font-size: 36px;
-  font-weight: 800;
+export const TextNormal = styled.p<TextNormalProps>`
+  font-size: 15px;
+  line-height: 1.8;
+  padding: 0.75rem 0rem;
   color: ${(props) =>
     props.textcolor ? props.textcolor : props.theme.colors.txtColorBlack};
 `;

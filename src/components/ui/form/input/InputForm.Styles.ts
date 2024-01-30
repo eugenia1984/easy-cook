@@ -9,14 +9,14 @@ export const Label = styled.label`
   line-height: 1.5rem;
   margin-bottom: 0.25rem;
   display: block;
-  color: var(--txt-color-gray);
+  color: ${(props) => props.theme.colors.txtColorGray};
 `;
 
 export const Input = styled.input`
-  background-color: var(--primary-background3);
-  border: 1px solid var(--border-gray);
+  background-color: ${(props) => props.theme.colors.primaryBackground3};
+  border: ${(props) => `1px solid ${props.theme.colors.borderGray}`};
   border-radius: 4px;
-  color: var(--txt-color-gray);
+  color: ${(props) => props.theme.colors.txtColorGray};
   line-height: 1.5rem;
   min-height: 3rem;
   padding: 0.25rem;
@@ -24,6 +24,6 @@ export const Input = styled.input`
 
   &:focus: {
     outline: none;
-    border-color: var(--border-focus);
+    border-color: ${(props) => props.theme.colors.borderFocus};
   }
 `;

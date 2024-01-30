@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  color: var(--primary-background3);
-  background-color: var(--btn-primary);
+  color: ${(props) => props.theme.colors.primaryBackground3};
+  background-color: ${(props) => props.theme.colors.btnPrimary};
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
@@ -18,6 +18,6 @@ export const Button = styled.button`
   border: 0;
 
   &:hover {
-    background-color: var(--btn-primary-hover);
+    background-color: ${(props) => props.theme.colors.btnPrimaryHover};
   }
 `;
