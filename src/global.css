@@ -12,6 +12,7 @@
   --primary-blackish: #015220;
   --primary-background: #e7e9f7;
   --primary-background2: #f1f2fa;
+  --primary-background3: #fff;
   --btn-primary: #049c3d;
   --btn-primary-focus-visible: #095c3c;
   --btn-primary-hover: #095c3c;
@@ -22,6 +23,13 @@
   --btn-contained-primary-focus: #014f1e;
   --btn-contained-primary-disabled-background: #8f9193;
   --dark-gray: #2f3954;
+  --box-shadow-border: rgba(51, 51, 51, 0.2);
+  --border-gray: #d0d1d1;
+  --border-focus: #009a3d;
+  --border-hover-outlined: #087034;
+  --txt-color-gray: #333;
+  --txt-color-black: #191919;
+  --txt-color-disabled: #416355;
 }
 
 *,

@@ -7,5 +7,6 @@ interface TitleH2Props {
 export const TitleH2 = styled.h2<TitleH2Props>`
   font-size: 30px;
   font-weight: 800;
-  color: ${(props) => (props.textColor ? props.textColor : "#191919")};
+  color: ${(props) =>
+    props.textColor ? props.textColor : "var(--txt-color-black)"};
 `;

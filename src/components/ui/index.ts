@@ -7,3 +7,5 @@ export * from "./headlines/headline-h2/HeadlineH2";
 export * from "./headlines/headline-h3/HeadlineH3";
 // TEXTS
 export * from "./text/normal-text/NormalText";
+// FORMS
+export * from "./form/input/InputForm";
