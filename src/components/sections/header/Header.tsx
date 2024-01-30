@@ -1,3 +1,8 @@
+import { useUserStore } from "../../../store";
+import { AppHeader } from "./Header.Styles";
+
 export const Header = () => {
-  return <header>Header</header>;
+  const { isAuth } = useUserStore();
+
+  return <AppHeader>Header</AppHeader>;
 };

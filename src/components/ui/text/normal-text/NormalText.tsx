@@ -3,10 +3,16 @@ import { TextNormal } from "./NormalText.Styles";
 
 type NormalTextProps = {
   text: string;
+  textColor?: string;
 }
 
-export const NormalText: FC<NormalTextProps> = ({ text }) => {
+export const NormalText: FC<NormalTextProps> = ({
+  text,
+  textColor
+}) => {
   return (
-    <TextNormal>{text}</TextNormal>
+    <TextNormal textColor={textColor}>
+      {text}
+    </TextNormal>
   )
 }

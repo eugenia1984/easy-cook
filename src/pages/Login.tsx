@@ -1,9 +1,10 @@
+import { LoginSection } from "../components/sections";
 import { NoAuthLayout } from "../layouts";
 
 export const Login = () => {
   return (
     <NoAuthLayout>
-      Login Form
+      <LoginSection />
     </NoAuthLayout>
   )
 };
