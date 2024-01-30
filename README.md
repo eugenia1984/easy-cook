@@ -81,7 +81,7 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
 
 ---
 
-## Folder structure
+### <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> FOLDER STRUCTURE
 
 ```
 > node_modules
@@ -90,6 +90,7 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
   > api
   > assets
   > components
+    > commond-components
     > sections
     > ui
   > layouts
@@ -112,7 +113,20 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
 
 ---
 
-## Image in `assets` folrder example:
+### <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> COMPONENTS
+
+As I do not use a third party library I create my our components.
+
+- Inside `components/ui` you can find the atom components, such
+  as: buttons, headlines, texts
+
+- Inside the `commond-components` you can find some reusable components for the app, such as: cards.
+
+- Inside the `components/sections` you can finde the sections, such as: header, footer.
+
+---
+
+### <img width="30" height="30" src="https://img.icons8.com/plasticine/30/monitor.png" alt="monitor"/> Image in `assets` folder example:
 
 ```TSX
 import reactLogo from './assets/react.svg'
@@ -141,7 +155,7 @@ export default App
 
 ---
 
-## Note
+## NOTE
 
 I appreciate your interest in this Project ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me at [LinkedIn - maria-eugenia-costa](https://www.linkedin.com/in/maria-eugenia-costa/)
 
