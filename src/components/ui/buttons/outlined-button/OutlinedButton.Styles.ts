@@ -15,7 +15,7 @@ export const Button = styled.button`
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
-  border: 0;
+  border: ${(props) => `1px solid ${props.theme.colors.btnPrimary}`};
 
   &:hover {
     border-color: ${(props) => props.theme.colors.borderHoverOutlined};

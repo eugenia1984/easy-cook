@@ -1,4 +1,5 @@
-import { LoginSection } from "../components/sections";
+
+import { LoginSection } from "../components/views";
 import { NoAuthLayout } from "../layouts";
 
 const Login = () => {

@@ -1,9 +1,10 @@
+import { HomeSection } from "../components/views";
 import { MainLayout } from "../layouts";
 
 const Home = () => {
   return (
     <MainLayout>
-      Home
+      <HomeSection />
     </MainLayout>
   );
 };
