@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { HeadlineH2, OutlinedButton } from "../../ui";
-import { Container, Description, ImageWrapper, Wrapper } from "./TitleDescriptionCta.Styles";
+import { BackgroundOverlay, ButtonContainer, Container, Description, ImageWrapper, Wrapper } from "./TitleDescriptionCta.Styles";
 
 type TitleDescriptionCtaProps = {
   textTitle: string;
@@ -18,12 +18,15 @@ export const TitleDescriptionCta: FC<TitleDescriptionCtaProps> = ({
   return (
     <Container>
       <ImageWrapper>
-        <img src={srcImage} height="22rem" width="100%" />
+        <img src={srcImage} height="24rem" width="100%" />
       </ImageWrapper>
+      <BackgroundOverlay />
       <Wrapper>
         <HeadlineH2 text={textTitle} textcolor="white" />
         <Description>{textDescription}</Description>
-        <OutlinedButton text={textButton} />
+        <ButtonContainer>
+          <OutlinedButton text={textButton} />
+        </ButtonContainer>
       </Wrapper>
     </Container>
   )

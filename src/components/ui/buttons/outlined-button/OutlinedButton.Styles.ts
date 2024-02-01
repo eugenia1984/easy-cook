@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   color: ${(props) => props.theme.colors.btnPrimary};
-  background-color: transparent;
+  background-color: ${(props) => props.theme.colors.primaryBackground3};
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
@@ -15,10 +15,11 @@ export const Button = styled.button`
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
-  border: ${(props) => `1px solid ${props.theme.colors.btnPrimary}`};
+  border: ${(props) => `2px solid ${props.theme.colors.btnPrimary}`};
 
   &:hover {
+    color: ${(props) => props.theme.colors.primaryBackground3};
+    background-color: ${(props) => props.theme.colors.borderHoverOutlined};
     border-color: ${(props) => props.theme.colors.borderHoverOutlined};
-    color: ${(props) => props.theme.colors.borderHoverOutlined});
   }
 `;
