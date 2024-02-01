@@ -16,7 +16,8 @@ export const LoginForm = () => {
 
   const navigate = useNavigate();
 
-  const { login, isAuth } = useUserStore();
+  const isUserAuthenticated = useUserStore((state) => state.isAuth);
+  const setUserAuthenticated = useUserStore((state) => state.login);
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmailInput(e.target.value);
@@ -26,29 +27,23 @@ export const LoginForm = () => {
     setPasswordInput(e.target.value);
   };
 
-  const handleLogin = () => {
+  const handleLogin = (e: any) => {
+    e.preventDefault();
 
     if (emailInput === "admin@email.com"
       && passwordInput === "123456") {
-      login();
-      console.log("Login successful! isAuth:", isAuth);
+      setUserAuthenticated();
     } else {
       setErrorEmail('X - E-mail must be: admin@email.com');
       setErrorPassword('X - Password must be: 123456');
-      alert(`Login no successful: ${emailInput} - ${passwordInput}`)
-      console.error("Wrong credentials");
     }
   };
 
   useEffect(() => {
-    console.log("isAuth inside useEffect:", isAuth);
-
-    if (isAuth) {
+    if (isUserAuthenticated) {
       navigate(PRIVATE_ROUTES.HOME);
     }
-  }, [isAuth]);
-
-
+  }, [isUserAuthenticated]);
 
   return (
     <FormLogin>
