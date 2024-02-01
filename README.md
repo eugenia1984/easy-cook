@@ -53,17 +53,17 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
 
 - That can be **browsed from a PC or cell phone without losing information**.
 
-- 2 sections of \*\*static content\*\*
+- 2 sections of **static content**
 
-- 1 section of **dynamic content** consuming \*\*public API\*\* of your choice.
+- 1 section of **dynamic content** consuming **public API** of your choice.
 
-- 1 section with a \*\*contact form\*\* (front-end implementation only).
+- 1 section with a **contact form** (front-end implementation only).
 
 - 1 user/key protected section that allows to have a private area.
 
 - **1 List ordered** by some criteria.
 
-- **! List with search engine** by some criteria (can be the same as the previous item).
+- **1 List with search engine** by some criteria (can be the same as the previous item).
 
 - The code must be published in an open GIT repository.
 
