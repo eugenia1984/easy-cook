@@ -26,24 +26,29 @@ export const LoginForm = () => {
     setPasswordInput(e.target.value);
   };
 
-  useEffect(() => {
-    if (isAuth) {
-      navigate(PRIVATE_ROUTES.HOME);
-    }
-  }, [isAuth, navigate]);
-
   const handleLogin = () => {
 
     if (emailInput === "admin@email.com"
       && passwordInput === "123456") {
       login();
+      console.log("Login successful! isAuth:", isAuth);
     } else {
       setErrorEmail('X - E-mail must be: admin@email.com');
       setErrorPassword('X - Password must be: 123456');
-      alert(`Login no ok: ${emailInput} - ${passwordInput}`)
+      alert(`Login no successful: ${emailInput} - ${passwordInput}`)
       console.error("Wrong credentials");
     }
   };
+
+  useEffect(() => {
+    console.log("isAuth inside useEffect:", isAuth);
+
+    if (isAuth) {
+      navigate(PRIVATE_ROUTES.HOME);
+    }
+  }, [isAuth]);
+
+
 
   return (
     <FormLogin>

@@ -1,10 +1,12 @@
 import { LoginSection } from "../components/sections";
 import { NoAuthLayout } from "../layouts";
 
-export const Login = () => {
+const Login = () => {
   return (
     <NoAuthLayout>
       <LoginSection />
     </NoAuthLayout>
   )
 };
+
+export default Login;
