@@ -1,4 +1,5 @@
-import { LoginForm } from ".."
+
+import { LoginForm } from "../../sections"
 import { HeadlineH1, NormalText } from "../../ui"
 import { Section, Wrapper } from "./LoginSection.Styles"
 

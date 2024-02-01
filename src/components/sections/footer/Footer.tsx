@@ -17,6 +17,11 @@ export const Footer = () => {
           isAuth &&
           <>
             <SpanLink>
+              <Link to="/" aria-label="Home page">
+                Home
+              </Link>
+            </SpanLink>
+            <SpanLink>
               <Link to={PRIVATE_ROUTES.SEARCH} aria-label="Search page">
                 Search
               </Link>
