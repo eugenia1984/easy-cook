@@ -31,8 +31,8 @@
 - Login with:
 
 ```
-user: test
-password: testing
+user: admin@email.com
+password: 123456
 ```
 
 - Search recipes
