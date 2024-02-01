@@ -93,10 +93,21 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
     > commond-components
     > sections
     > ui
+      > buttons
+      > form
+      > headlines
+      > loader
+      > text
   > layouts
   > models
     > types
   > pages
+    Contact
+    Home
+    Login
+    NotFound
+    Recipe
+    Search
   > routes
   > theme
   > utils
@@ -118,7 +129,7 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
 As I do not use a third party library I create my our components.
 
 - Inside `components/ui` you can find the atom components, such
-  as: buttons, headlines, texts
+  as: buttons, atom components for forms, headlines, loader, text.
 
 - Inside the `commond-components` you can find some reusable components for the app, such as: cards.
 
