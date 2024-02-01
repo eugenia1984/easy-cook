@@ -9,3 +9,5 @@ export * from "./headlines/headline-h3/HeadlineH3";
 export * from "./text/normal-text/NormalText";
 // FORMS
 export * from "./form/input/InputForm";
+// LOADER
+export * from "./loader/Loader";

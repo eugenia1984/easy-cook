@@ -4,8 +4,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { PRIVATE_ROUTES, PUBLIC_ROUTES } from "./routes";
 import { PrivateRoutes } from "./routes/private-routes";
 
-import "./App.css";
+import { Loader } from './components/ui';
 
+import "./App.css";
 
 const Login = lazy(() => import('./pages/Login'));
 const Home = lazy(() => import('./pages/Home'));
@@ -23,7 +24,7 @@ function App() {
         <Route
           path="/"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loader />}>
               <PrivateRoutes />
             </Suspense>
           }
