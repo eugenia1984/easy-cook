@@ -31,7 +31,7 @@ function App() {
         >
           <Route index path={PRIVATE_ROUTES.HOME} element={<Home />} />
           <Route path={PRIVATE_ROUTES.SEARCH} element={<Search />} />
-          <Route path={PRIVATE_ROUTES.RECIPE_BY_ID} element={<Recipe />} />
+          <Route path={PRIVATE_ROUTES.HOME + PRIVATE_ROUTES.RECIPE_BY_ID} element={<Recipe />} />
           <Route path={PRIVATE_ROUTES.CONTACT} element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>

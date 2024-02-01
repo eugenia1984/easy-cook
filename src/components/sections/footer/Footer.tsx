@@ -1,20 +1,34 @@
+import { Link } from "react-router-dom";
 import { useUserStore } from "../../../store";
 import { YEAR } from "../../../utils";
-import { NormalText } from "../../ui";
-import { AppFooter } from "./Footer.Styles";
+import { PRIVATE_ROUTES } from "../../../routes";
+import { AppFooter, FooterWrapper, Span, SpanLink } from "./Footer.Styles";
 
 export const Footer = () => {
   const { isAuth } = useUserStore();
+
   return (
     <AppFooter>
-      <NormalText text={`© ​Copyright ${YEAR.toString()}`} textcolor="var(--txt-color-disabled)" />
-      {
-        isAuth &&
-        <>
-          <NormalText text="Search" />
-          <NormalText text="Contact" />
-        </>
-      }
+      <FooterWrapper>
+        <Span >
+          {`© ​Copyright ${YEAR.toString()}`}
+        </Span>
+        {
+          isAuth &&
+          <>
+            <SpanLink>
+              <Link to={PRIVATE_ROUTES.SEARCH} aria-label="Search page">
+                Search
+              </Link>
+            </SpanLink>
+            <SpanLink>
+              <Link to={PRIVATE_ROUTES.CONTACT} aria-label="Contact page">
+                Contact
+              </Link>
+            </SpanLink>
+          </>
+        }
+      </FooterWrapper>
     </AppFooter>
   )
 };
