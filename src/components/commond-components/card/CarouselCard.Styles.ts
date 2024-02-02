@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+export const Container = styled.div`
   width: 156px;
   height: 194px;
   box-shadow: 0 1px 2px 0 rgba(51, 51, 51, 0.15);
+  cursor: pointer;
 
   & > a {
     text-decoration: none;
