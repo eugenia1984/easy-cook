@@ -18,7 +18,7 @@ export const TitleDescriptionCta: FC<TitleDescriptionCtaProps> = ({
   return (
     <Container>
       <ImageWrapper>
-        <img src={srcImage} height="24rem" width="100%" />
+        <img src={srcImage} height="352" width="100%" />
       </ImageWrapper>
       <BackgroundOverlay />
       <Wrapper>

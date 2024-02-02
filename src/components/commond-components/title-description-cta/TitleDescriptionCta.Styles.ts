@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   margin: 0 auto;
-  height: 20rem;
+  height: 22rem;
   position: relative;
 `;
 
@@ -27,7 +27,9 @@ export const BackgroundOverlay = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  top: 2rem;
+  position: absolute;
+  z-index: 1;
+  top: 4rem;
   left: 20%;
   width: 60%;
   align-items: center;
@@ -35,10 +37,20 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 12px;
-  position: absolute;
-  z-index: 1;
   text-align: center;
   color: white;
+
+  @media (max-width: 765px) {
+    top: 3rem;
+    left: 5%;
+    width: 90%;
+  }
+
+  @media (min-width: 1440px) {
+    top: 5rem;
+    left: 20%;
+    width: 60%;
+  }
 `;
 
 export const Description = styled.p`

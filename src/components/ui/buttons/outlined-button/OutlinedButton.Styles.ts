@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   color: ${(props) => props.theme.colors.btnPrimary};
-  background-color: ${(props) => props.theme.colors.primaryBackground3};
-  border-radius: 4px;
+  background-color: #ffffffcf;
+  border-radius: 7px;
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
@@ -15,7 +15,7 @@ export const Button = styled.button`
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
-  border: ${(props) => `2px solid ${props.theme.colors.btnPrimary}`};
+  border: ${(props) => `3px solid ${props.theme.colors.btnPrimary}`};
 
   &:hover {
     color: ${(props) => props.theme.colors.primaryBackground3};
