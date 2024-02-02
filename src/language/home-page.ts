@@ -9,3 +9,8 @@ export enum DISCOVER {
   DESCRIPTION = "Thousands of recipes in Guided Cooking, developed and tested by our experts so that you get a perfect result",
   BUTTON = "Discover",
 }
+
+export enum RECIPES {
+  TITLE = "The latest recipes!",
+  SEE_MORE = "See more",
+}

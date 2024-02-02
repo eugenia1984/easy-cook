@@ -10,6 +10,12 @@ export const AppHeader = styled.header`
   top: 0;
   width: 100%;
   z-index: 600;
+`;
+
+export const HeaderContainer = styled.div`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-content: center;
