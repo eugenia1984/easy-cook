@@ -4,17 +4,15 @@
 
 ## <img width="40" height="40" src="https://img.icons8.com/plasticine/40/monitor.png" alt="monitor"/> Technologies
 
-- <img width="30" height="30" src="https://img.icons8.com/color/30/html-5--v1.png" alt="html5 icon"/> HTML5
-
-- <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3 icon"/> CSS3
-
-- <img width="30" height="30" src="https://img.icons8.com/officel/30/react.png" alt="react icon"/> React: react-router-dom
-
-- <img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript icon"/> TypeScript
-
-- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction), for general states
-
-- [axios](https://axios-http.com/docs/intro), for fetching data
+| Technologies used                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------------- |
+| <img width="30" height="30" src="https://img.icons8.com/color/30/html-5--v1.png" alt="html5 icon"/> HTML5           |
+| <img width="30" height="30" src="https://img.icons8.com/color/30/css3.png" alt="css3 icon"/> CSS3                   |
+| <img width="30" height="30" src="https://img.icons8.com/officel/30/react.png" alt="react icon"/> React              |
+| react-router-dom                                                                                                    |
+| <img width="30" height="30" src="https://img.icons8.com/color/30/typescript.png" alt="typescript icon"/> TypeScript |
+| [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction), for general states                            |
+| [axios](https://axios-http.com/docs/intro), for fetching data                                                       |
 
 ---
 
