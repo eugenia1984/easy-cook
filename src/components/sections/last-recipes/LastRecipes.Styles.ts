@@ -7,5 +7,5 @@ export const TitleContainer = styled.div`
 `;
 
 export const SliderContainer = styled.div`
-  padding: 1rem 0 2rem 0;
+  padding: 1rem 0.5rem 2rem;
 `;
