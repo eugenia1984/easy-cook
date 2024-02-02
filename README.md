@@ -86,6 +86,7 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
 ```
 > node_modules
 > public
+  > img
 > src
   > api
   > assets
@@ -98,6 +99,8 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
       > headlines
       > loader
       > text
+    > views
+  > languages
   > layouts
   > models
     > types
@@ -121,6 +124,22 @@ Create the **FrontEnd** for a **web site** that use a **public API**, using:
   stconfig.node.json
   vite.config.ts
 ```
+
+### What you will find?
+
+- `components` all the components that I'm using in the app, as they are many I separate in: `coommond-components`, `sections` and `ui` (all the atomic components like buttons, titles, text, etc).
+
+- `languages` all the text in the app is store in an `enum` or a `constant`.
+
+- `models` as I'm working with TYpeScript here I collect all the `classes`, `interfaces` or `types` that I'm using in the application.
+
+- `pages` for the pages of the app.
+
+- `routes`, to create the constants of the URL of the app, and with **React-router-dom** create one public route (Login page) and the rest converted to protected routes.
+
+- `store` to manage the global stated with **zustand**.
+
+- `theme` where I created the general theme used in the entired application.
 
 ---
 
