@@ -7,8 +7,12 @@ import { useUserStore } from "../../../../store";
 
 import { ErrorMessage, FormLogin } from "./LoginForm.Styles";
 import { PRIVATE_ROUTES } from "../../../../routes";
+import { LOGIN_FORM } from "../../../../language";
 
 export const LoginForm = () => {
+  const CORRECT_EMAIL = "admin@email.com";
+  const CORRECT_PASSWORD = "123456";
+
   const [emailInput, setEmailInput] = useState<string>('');
   const [errorEmail, setErrorEmail] = useState<null | string>(null);
   const [passwordInput, setPasswordInput] = useState<string>('');
@@ -30,12 +34,12 @@ export const LoginForm = () => {
   const handleLogin = (e: any) => {
     e.preventDefault();
 
-    if (emailInput === "admin@email.com"
-      && passwordInput === "123456") {
+    if (emailInput === CORRECT_EMAIL
+      && passwordInput === CORRECT_PASSWORD) {
       setUserAuthenticated();
     } else {
-      setErrorEmail('X - E-mail must be: admin@email.com');
-      setErrorPassword('X - Password must be: 123456');
+      setErrorEmail(LOGIN_FORM.EMAIL_ERROR_MESSAGE);
+      setErrorPassword(LOGIN_FORM.EMAIL_ERROR_MESSAGE);
     }
   };
 
@@ -48,22 +52,25 @@ export const LoginForm = () => {
   return (
     <FormLogin>
       <InputForm
-        labelText="Your e-mail account"
+        labelText={LOGIN_FORM.EMAIL_LABEL}
         id="email"
-        placeholderText="Type you e-mail here"
+        placeholderText={LOGIN_FORM.EMAIL_PLACEHOLDER}
         value={emailInput}
         onChange={handleEmailChange}
       />
       {errorEmail && <ErrorMessage>{errorEmail}</ErrorMessage>}
       <InputForm
-        labelText="Your password"
+        labelText={LOGIN_FORM.PASSWORD_LABEL}
         id="password"
-        placeholderText="Type your password here"
+        placeholderText={LOGIN_FORM.PASSWORD_PLACEHOLDER}
         value={passwordInput}
         onChange={handlePasswordChange}
       />
       {errorPassword && <ErrorMessage>{errorPassword}</ErrorMessage>}
-      <PrimaryButton text="Log in" onClick={handleLogin} />
+      <PrimaryButton
+        text={LOGIN_FORM.BUTTON_TEXT}
+        onClick={handleLogin}
+      />
     </FormLogin>
   )
 }

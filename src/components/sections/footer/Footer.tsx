@@ -3,6 +3,7 @@ import { useUserStore } from "../../../store";
 import { YEAR } from "../../../utils";
 import { PRIVATE_ROUTES } from "../../../routes";
 import { AppFooter, FooterWrapper, Span, SpanLink } from "./Footer.Styles";
+import { FOOTER_LINKS } from "../../../language";
 
 export const Footer = () => {
   const { isAuth } = useUserStore();
@@ -11,24 +12,24 @@ export const Footer = () => {
     <AppFooter>
       <FooterWrapper>
         <Span >
-          {`© ​Copyright ${YEAR.toString()}`}
+          {`${FOOTER_LINKS.COPYRIGHT}${YEAR.toString()}`}
         </Span>
         {
           isAuth &&
           <>
             <SpanLink>
               <Link to="/" aria-label="Home page">
-                Home
+                {FOOTER_LINKS.HOME}
               </Link>
             </SpanLink>
             <SpanLink>
               <Link to={PRIVATE_ROUTES.SEARCH} aria-label="Search page">
-                Search
+                {FOOTER_LINKS.SEARCH}
               </Link>
             </SpanLink>
             <SpanLink>
               <Link to={PRIVATE_ROUTES.CONTACT} aria-label="Contact page">
-                Contact
+                {FOOTER_LINKS.CONTACT}
               </Link>
             </SpanLink>
           </>

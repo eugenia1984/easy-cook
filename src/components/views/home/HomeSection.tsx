@@ -3,8 +3,7 @@ import { Wrapper } from "./HomeSection.Styles";
 
 import bgImage from "./../../../assets/recipes_pattern.jpg";
 import cake from "./../../../assets/gooseberry-cake.png";
-
-import { BAKE, DISCOVER } from "./home-constants";
+import { BAKE, DISCOVER } from "../../../language";
 
 export const HomeSection = () => {
   return (
