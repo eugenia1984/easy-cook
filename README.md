@@ -1,6 +1,6 @@
 # <img width="40" height="40" src="https://img.icons8.com/plasticine/40/monitor.png" alt="monitor"/> EASY COOK
 
----
+
 
 ## <img width="40" height="40" src="https://img.icons8.com/plasticine/40/monitor.png" alt="monitor"/> Technologies
 
